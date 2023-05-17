@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body style="color:orange;">
+    <h1>FORMS IN HTML</h1>
+    <!-- signup.js is file in back end but here i am learing HTML so there is no .js file here -->
+    <!-- <form action="/signup.js" method="get"> -->
+
+    <form action="" method="get">
+        <label for="useremail">Enter youtr Email address:</label>
+        <input type="email" name="" id="useremail">
+        <input type="email" name="" id="" placeholder="Enter email here">
+        <br>
+        <label for="1">hi</label>
+        <input type="checkbox" name="" id="1" value="HEllo">
+        <br>
+        <label for="password">Enter password:</label>
+        <input type="password" >
+        <br>
+        <input type="time" >
+        <br>
+        <input type="number">
+        <br>
+        <input type="file">
+        <br>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="take data to server" name="submit">
+    
+
+        <hr>
+        <select name="car" >
+            <option value="bmw">bmw</option>
+            <option value="honda">honda</option>
+            <option value="porche">porche</option>
+        </select>
+
+        <hr>
+        <h3>Multiple selection</h3>
+        <select size="3" name="car" multiple>
+            <option value="bmw">bmw</option>
+            <option value="honda">honda</option>
+            <option value="porche">porche</option>
+        </select>
+
+        <hr>
+        <h2>datalist</h2>     
+
+        <input list="cars">
+        <datalist id="cars">
+            <option value="bmw">
+            <option value="honda">
+            <option value="porche">
+        </datalist>
+    </form>
+</body>
+</html>
