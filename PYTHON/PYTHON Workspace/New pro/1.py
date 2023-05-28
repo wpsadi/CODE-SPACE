@@ -18,7 +18,7 @@ with open("PYTHON/PYTHON Workspace/New pro/csv/present.csv","r",encoding="utf-8"
             d2.append(i[1])
             d_2.append(i[1].strip().lower())
 
-with open("PYTHON/PYTHON Workspace/New pro/absent.csv","w",newline="") as f:
+with open("PYTHON/PYTHON Workspace/New pro/absent.csv","w",newline="",encoding="utf-8") as f:
     c=0
     w=csv.writer(f)
     w.writerow(["S. No.","Name of Absentee"])
