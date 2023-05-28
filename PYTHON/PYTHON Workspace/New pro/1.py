@@ -18,16 +18,14 @@ with open("PYTHON/PYTHON Workspace/New pro/csv/present.csv","r",encoding="utf-8"
             d2.append(i[1])
             d_2.append(i[1].strip().lower())
 
-with open("PYTHON/PYTHON Workspace/New pro/absent.csv","w") as f:
+with open("PYTHON/PYTHON Workspace/New pro/absent.csv","w",newline="") as f:
     c=0
     w=csv.writer(f)
     w.writerow(["S. No.","Name of Absentee"])
     for i in range(len(d_1)):
         c+=1
         j=d_1[i]
-        print(j)
         if j not in d_2:
-            print(j)
             w.writerow([c,d1[i]])
 
     print("done")
