@@ -24,8 +24,7 @@ with open("PYTHON/PYTHON Workspace/New pro/absent.csv","w",newline="") as f:
     w.writerow(["S. No.","Name of Absentee"])
     for i in range(len(d_1)):
         c+=1
-        j=d_1[i]
-        if j not in d_2:
+        if d_1[i] not in d_2:
             w.writerow([c,d1[i]])
 
     print("done")
