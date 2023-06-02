@@ -4,28 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display</title>
+    <title>Document</title>
     <style>
-        h3,p,a{
-            color:green;
-            background-color: brown;
-            border:10px aqua ridge;
-            border-radius:500px;
+        h3, p, li {
+            
+            background-color: #720505;
+            color: aliceblue;
+            border: 5px solid #acac07;
+            padding: 10px;
+        }
+        .item{
+            display: none;
+            background-color: #720505;
+            color: aliceblue;
+            border: 5px solid #acac07;
+            padding: 10px;
+        }
+        .item2{
+            height: 100px;
+        }
+        img{
+            visibility: hidden;
         }
     </style>
 </head>
 <body>
     <h3>
         Normal Layout
-    </h3>
-    <p>
+      </h3>
+      <p>
         Elements are placed in the order in which they appear in the HTML document, and their positions are determined by their default positioning properties.
-    </p>
-    <div align="center">
-        <br><br><br>
-        <a style="color:white;text-decoration:none;border-color:black;" href="/workspaces/codespaces-blank/RESOURCE/CSS/CSS Workspace/Code- More on CSS/ASSIGNMENT/media/our-mission.png?download" download="our-mission.png">
-            DOWNLOAD
-        </a>
-    </div>
+      </p>
+      <ol>
+        <li>
+          Item 1
+        </li>
+        <li>
+          Item 2
+        </li>
+        <li>
+          Item 3
+        </li>
+      </ol>
+
+      <div>
+        <div class="item1 item">Item 1</div>
+        <div class="item2 item">Item 2</div>
+        <div class="item3 item">Item 3</div>
+      </div>
+
+      <h1>Lorem, ipsum dolor.</h1>
+      <p>Text before image</p>
+   <img src="./image.jpg" width="500px" />
+   <p>Text after image</p>
 </body>
 </html>
