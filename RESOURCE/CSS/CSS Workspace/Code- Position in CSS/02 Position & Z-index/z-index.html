@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position:relative;
+            font-size:20px;
+        }
+        .box{
+            height:100px;
+            width:200px;
+            position:absolute;
+            color:slateblue;
+        }
+        .box-one{
+            background-color: red;
+            z-index:1;
+
+        }
+        .box-two{
+            background-color: green;
+            z-index:2;
+            top:50px;
+            left:150px;
+        }
+        .box-three{
+            background-color: aqua;
+            z-index:3;
+            top:100px;
+            left:300px;;
+        }
+        .para{
+            overflow: scroll;
+            /* overflow-y: 10px; */
+            color:green;
+            font-size:18px;
+            background-color: orange;
+            margin-left:100px;
+            margin-right:100px;
+            padding:30px;
+            height:100px;
+            width:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-one">z-index 1</div>
+        <div class="box box-two">z-index 2</div>
+        <div class="box box-three">z-index 3</div>
+    </div>
+    <div>
+        <h1>About PW Skils</h1>
+        <p class="para">PW Skills is an online learning platform that offers a variety of courses on programming, data science, and other tech-related topics. The courses are taught by experienced professionals and cover a wide range of topics, from beginner to advanced levels. PW Skills also offers a number of features that make it a great choice for online learning, such as interactive exercises, quizzes, and projects.</p>
+    </div>
+</body>
+</html>

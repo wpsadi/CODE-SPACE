@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Position</title>
+        <style>
+            .container{
+                background-color: aqua;
+                width:500px;
+                height:300px;
+                border:10px orange dashed;
+                position:relative;
+                overflow:scroll;
+            }
+            .box{
+                width:200px;
+                height:200px;
+            }
+            .box-one{
+                background-color: red;
+            }
+            .box-two{
+                background-color: green;
+                left:100px;
+                top:50px;  /* static me top,left relevant nhi hota hai */
+                /* value negative hone par overlap ho jaega */
+                position:sticky;
+            }
+            .box-three{
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box box-one"></div>
+            <div class="box box-two"></div>
+            <div class="box box-three"></div>
+        </div>
+    </body>
+</html>
