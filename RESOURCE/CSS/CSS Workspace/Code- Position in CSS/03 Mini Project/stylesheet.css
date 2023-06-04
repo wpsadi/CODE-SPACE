@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+.navbar{
+    border:double 5px black;
+    border-radius:20px;
+    padding:10px;
+}
+div.container{
+    overflow-y:scroll;
+    border-right:black solid 5px;
+    width:180px;
+    height:550px;
+}
+nav.navbar>a{
+    width:50px;
+    height:50px;
+    display:block;
+    font-family: Yellowtail;
+    font-size: 18px;
+    padding:15px;
+    color:white;
+    background-color: rgb(0, 0, 0);
+    font-weight: bold;
+    border:rgb(0, 0, 0) dashed 10px;
+    border-radius:10px;
+    margin-top:5px;
+    text-decoration:none;
+}
+div.box{
+    margin-left:25px;
+    margin-right:200px;
+    margin-top:25px;
+    border-radius:30px;
+}
