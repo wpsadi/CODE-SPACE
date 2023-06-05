@@ -4,11 +4,117 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./media/pw-favicon.png" type="image/x-icon">
         <title>Q2</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+            *{
+                font-family: Yellowtail;
+                margin:0;
+                padding:0;
+                outline:0;
+            }
+            .pwskills-logo img{
+                width:180px;
+                background-color: rgb(43, 160, 196);
+                border-radius:10px;
+                margin:0;
+            }
+            .navbar{
+                position:sticky;
+                top:0;
+                box-shadow: 0 2px 10px rgb(0, 0, 0);
+                background-color: rgb(36, 43, 46);
+                height:100vh;
+                width:180px;
+                /* top:0px; */
+                z-index:1;
+            }
+            .navbar-nav{
+                list-style: none;
+                padding: 20px 0px;
+                vertical-align:middle;
+                /* margin-left:20px; */
+            }
+            .nav-item{
+                padding:9px 3px;
+                border-bottom:black 2px dotted;
+                /* display:inline-block; */
+                font-size:18px;
+            }
+            .nav-link{
+                margin:0px 10px;
+                text-decoration:none;
+                font-weight:bold;
+                color:white;
+            }
+            .content{
+                height:100vh;
+                position:absolute;
+                z-index:1;
+                top:0px;
+                margin-left:180px;
+                font-size:18px;
+                background-color: rgb(31, 31, 31);
+            }
+            .banner-image img{
+                width:550px;
+                height:350px;
+                margin: 25px 0px;
+                margin-left:270px;
+            }
+            .heading{
+                margin-left:450px;
+                color:rgb(85, 72, 203);
+            }
+            p{
+                margin:5px 100px;
+                color:white;
+            }
+            
+        </style>
     </head>
     <body>
-        <div class="container-navbar">
-            <div></div>
-        </div>
+        <header class="navbar">
+            <nav>
+                <div  class="pwskills-logo">
+                    <img src="./media/PWSkills-logo.png" alt="">
+                </div>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Courses</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">PW Skills Lab</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Job Portal</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Experience Portal</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Hall of Fame</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Become an Affilate</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="content">
+            <section>
+                <artile>
+                    <h1 class="heading">PW Skills</h1>
+                    <p>
+                        PW Skills is an online learning platform that offers a wide range of courses on web development, data science, and other tech-related topics. The courses are taught by experienced professionals and are designed to help students learn the skills they need to succeed in the tech industry.
+                    </p>
+                </artile>
+                <div class="banner-image"><img src="./media/banner.png" alt=""></div>
+                <artile>
+                    <h1 class="heading">Our Mission</h1>
+                    <p>
+                        The mission of PW Skills is to provide students with comprehensive and accessible learning experiences that empower them to achieve their academic and professional goals. PW Skills believes that every student has the potential to succeed, and it is committed to providing the resources and support necessary to help students reach their full potential.
+                    </p>
+                </artile>
+            </section>
+        </main>
+        <footer align="center" style="font-family:arial;">
+            This content is a pure creativity of me(Aditya)
+        </footer>
     </body>
 </html>
