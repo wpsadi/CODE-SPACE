@@ -7,38 +7,76 @@
         <title>Q7</title>
         <link rel="shortcut icon" href="./media/pokemon-favicon.ico" type="image/x-icon">
         <style>
+            img{
+                /* padding-top:75px; */
+                border-radius:20px;
+                background-color: black;
+                height:200px;
+            }
             .container{
-                height:900px;
-                width:900px;
-                background-color: aqua;
+                
+                /* border:10px black ridge; */
+                position:absolute;
+                top:100px;
+                margin:0px 250px;
             }
             .box{
-                margin:100px;
-                font-weight:bold;
-                height:400px;
+                position:absolute;
+                padding:25px 50px;
+                height:250px;
                 width:200px;
             }
-            .box img{
-                background-color: black;
-                height:300px;
-            }
             .box1{
-
-                background-color: #fff;
+                top:0px;
+                z-index:1;
+                border-radius:20px;
+                background-color: aqua;
             }
             .box2{
-                background-color: #fff;
+                z-index:2;
+                top:50px;
+                margin:0px 35px;
+                border-radius:20px;
+                background-color: rgb(49, 138, 49);
             }
             .box3{
-                background-color: #fff;
+                z-index:3;
+                top:100px;
+                border-radius:20px;
+                margin:0px 70px;
+                background-color: rgb(206, 123, 45);
+            }
+            .box1:hover{
+                top:0px;
+                z-index:4;
+                border-radius:20px;
+                background-color: aqua;
+            }
+            .box2:hover{
+                z-index:5;
+                top:50px;
+                margin:0px 35px;
+                border-radius:20px;
+                background-color: rgb(49, 138, 49);
+            }
+            .box3:hover{
+                z-index:6;
+                top:100px;
+                border-radius:20px;
+                margin:0px 70px;
+                background-color: rgb(206, 123, 45);
+            }
+            .heading{
+                margin-left:70px;
+                font-weight:bold;
             }
         </style>
     </head>
     <body>
         <div class="container">
-            <div class="box box1">CARD 1<a target="_blank" href="https://www.pokemon.com/us/pokedex/blastoise"><img src="./media/pokemon-blastoise.png" alt="Blastoise"></a></div>
-            <div class="box box2">CARD 2<a target="_blank" href="https://www.pokemon.com/us/pokedex/venusaur"><img src="./media/pokemon-venasaur.png" alt="Venasaur"></a></div>
-            <div class="box box3">CARD 3<a target="_blank" href="https://www.pokemon.com/us/pokedex/dragonite"><img src="./media/pokemon-dragonite.png" alt="Dragonite"></a></div>
+            <div class="box box1"><div class="heading">CARD 1</div><br><a target="_blank" href="https://www.pokemon.com/us/pokedex/blastoise"><img src="./media/pokemon-blastoise.png" alt="Blastoise"></a></div>
+            <div class="box box2"><div class="heading">CARD 2</div><br><a target="_blank" href="https://www.pokemon.com/us/pokedex/venusaur"><img src="./media/pokemon-venasaur.png" alt="Venasaur"></a></div>
+            <div class="box box3"><div class="heading">CARD 3</div><br><a target="_blank" href="https://www.pokemon.com/us/pokedex/dragonite"><img src="./media/pokemon-dragonite.png" alt="Dragonite"></a></div>
         </div>
     </body>
 </html>
