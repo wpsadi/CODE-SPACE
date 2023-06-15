@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5</title>
+    <link rel="shortcut icon" href="./media/media-Q6/favicon-web.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+        .container> h1#google{
+            font-size:80px;
+            font-weight:bold;
+            text-align:center;
+            font-family:Poppins;
+            color:rgb(197, 192, 192);
+            margin-bottom:5px;
+        }
+        .container{
+            position:relative;
+            top:125px;
+            left:400px;
+            width:40%;
+            padding-bottom:10px;
+            /* background-color: red; */
+        }
+        body{
+            background-color: rgb(20, 18, 18);
+        }
+        #search-box{
+            display:flex;
+            flex-direction: row;
+            margin-left:20px;
+            width:500px;
+            height:40px;
+            outline-offset: 2px;
+            outline-color: rgb(116, 116, 116);
+            outline-style: solid;
+            border-radius:20px;
+            /* background-color: blue; */
+        }
+        div#search-box>input{
+            position:relative;
+            font-size:20px;
+            color:white;
+            top:2px;
+            left:10px;
+            border:none;
+            width:350px;
+            height:35px;
+            background-color: rgb(20, 18, 18);
+        }
+        div#search-box>input:focus{
+            outline:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="google">Google</h1>
+        <div id="search-box">
+            <img src="./media/media-Q6/search-icon.png" alt="search" style="height:35px;position:relative;top:3px;left:5px;">
+            <input type="text" name="q">
+            <img src="./media/media-Q6/voice.png" alt="voice" style="height:35px;position:relative;left:8px;">
+            <img src="./media/media-Q6/lens.png" alt="lens" style="height:35px;position:relative;left:8px;">
+        </div>
+    </div>
+</body>
+</html>
