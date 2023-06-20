@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Container</title>
+    <style>
+        div.container{
+            display:grid;
+            /* grid-template-rows:100px 100px 200px; */
+            /* grid-template-columns: repeat(4,1fr); */
+            grid-template-areas:                
+            "header header header"
+            "sidebar content content"
+            "footer footer footer";
+            height:90vh;
+        }
+        #header{
+            grid-area:header;
+            background-color: rgb(14, 75, 75);
+        }
+        #sidebar{
+            grid-area:sidebar;
+            background-color: brown;
+        }
+        #content{
+            grid-area:content;
+            background-color: yellow;
+        }
+        #footer{
+            grid-area:footer;
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="header">header</div>
+        <div id="sidebar">sidebar</div>
+        <div id="content">content</div>
+        <div id="footer">footer</div>
+        <!-- <div id="five">5</div>
+        <div id="six">6</div> -->
+
+        <!-- <div id="six">7</div> -->
+    </div>
+</body>
+</html>

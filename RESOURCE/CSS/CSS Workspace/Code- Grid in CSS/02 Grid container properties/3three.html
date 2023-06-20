@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Container</title>
+    <style>
+        div.container{
+            display:grid;
+            /* border:1px black solid; */
+            /* grid-template-rows:100px 100px 200px; */
+            grid-template-columns: repeat(3,100px);
+            /* justify-content:center; */
+            /* align-content:end; */
+            justify-items:end;
+            height:400px;
+        }
+        .container-body{
+            border:1px black solid;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="header" class="container-body">header</div>
+        <div id="sidebar" class="container-body">sidebar</div>
+        <div id="content" class="container-body">content</div>
+        <div id="footer" class="container-body">footer</div>
+        <div id="five" class="container-body">5</div>
+        <div id="six" class="container-body">6</div>
+
+        <div id="six" class="container-body">7</div>
+</body>
+</html>
