@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Item</title>
+    <style>
+        div.container{
+            display:grid;
+            /* grid-template-rows:100px 100px 200px; */
+            grid-template-columns: repeat(3,1fr);
+            grid-gap:20px;
+            /* height:90vh; */
+        }
+        .container-body{
+            border:2px black solid;
+        }
+
+        #one{
+            grid-column-start: 1;
+        }
+        #two{
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        #three{
+            grid-column: 1/3;
+        }
+        #four{
+            grid-column-start: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="one" class="container-body">header</div>
+        <div id="two" class="container-body">sidebar</div>
+        <div id="three" class="container-body">content</div>
+        <div id="four" class="container-body">footer</div>
+    </div>
+</body>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Item</title>
+    <style>
+        div.container{
+            display:grid;
+            /* grid-template-rows:100px 100px 200px; */
+            grid-template-columns: repeat(3,1fr);
+            /* grid-template-rows: repeat(10,1fr); */
+
+            grid-gap:20px;
+            /* height:90vh; */
+        }
+        .container-body{
+            border:2px black solid;
+        }
+
+        #one{
+            order:1;
+        }
+        #two{
+            order:2;
+        }
+        #three{
+            order:3;
+        }
+        #four{
+            order:4;
+        }
+        #five{
+            order:5;
+        }
+        #six{
+            order:6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="one" class="container-body">1</div>
+        <div id="two" class="container-body">2</div>
+        <div id="three" class="container-body">3</div>
+        <div id="four" class="container-body">4</div>
+        <div id="five" class="container-body">5</div>
+        <div id="six" class="container-body">6</div>
+    </div>
+</body>
