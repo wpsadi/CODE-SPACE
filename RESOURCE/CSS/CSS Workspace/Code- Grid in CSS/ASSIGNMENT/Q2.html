@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./media/favicon.png" type="image/x-icon">
+    <title>Healthy Food</title>
+    <style>
+        .container{
+            border:2px black solid;
+            border-radius:5px;
+            display:grid;
+            height:90vh;
+            width:90vw;
+            margin:0vh 3vw;
+            grid-template-areas: 
+            "content image";
+            grid-template-rows:repeat(2,fr1)
+        }
+        #content{
+            padding:8vh 0vw;
+            padding-left:5vw;
+            justify-self:centre;
+            align-self:center;
+            grid-area:content;
+        }
+        #image{
+            /* margin-top:500px; */
+            border-radius:5px;
+            margin:13vh 2vw;
+            width:50vw;
+            height:75vh;
+            grid-area:image;
+            background-color: yellow;
+        }
+        #content>p{
+            font-size:65%;
+            color:rgb(121, 114, 114)
+        }
+        img#healthy-food{
+            border-radius:5px;
+            border-right:1px solid black;
+            height:75vh;
+            width:30vw;
+        }
+        div.navbar{
+            position:fixed;
+            width:90vw;
+            height:2vh;
+            background-color: white;
+        }
+        img#favicon{
+            height:6vh;
+            width:3vw;
+        }
+        #nav-list{
+            margin:3vh 0;
+            box-shadow:0 1vh 5px black;
+            font-size:70%;
+            list-style:none;
+            display:flex;
+            flex-direction:row;
+            justify-content:space-evenly;
+            justify-items:center;
+            align-items:center
+
+        }
+        #menu{
+            justify-items:center;
+            align-items:center;
+            list-style:none;
+            display:flex;
+            flex-direction:row;
+            gap:1vw;
+        }
+        #menu>li{
+            /* border:1px solid black; */
+            padding:1vh 2vw;
+        }
+        #nav-list>a{
+            border-radius:5px;
+            padding:1vh 3vw;
+            color:white;
+            text-decoration:none;
+            font-style:italic;
+            background-color: rgb(95, 177, 95);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <ul id="nav-list">
+                    <li>
+                        <img src="./media/favicon.png" alt="Juicy Food" id="favicon">
+                    </li>
+                    <li>
+                        <ul id="menu">
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                    </li>
+                    <a href="#">
+                        <li>Login</li>
+                    </a>
+                </ul>
+            </nav>
+            </div>
+        <div id="content">
+            <h1>Healthy Food</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nisi praesentium molestiae sapiente commodi quibusdam nemo quisquam, aliquam, unde aspernatur, dolorem totam quis aut sed!</p>
+            <br>
+            <a href="#" style="text-decoration:none;font-style:italic; padding: 2vh 2vw; background-color: black; color:white;">Read Me</a>
+        </div>
+
+        <div id="image">
+            <img src="./media/health-food.png" alt="Healthy Food" id="healthy-food">
+        </div>
+    </div>
+</body>
+</html>

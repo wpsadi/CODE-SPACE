@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./media/favicon.png" type="image/x-icon">
+    <title>Healthy Food</title>
+    <style>
+        .container{
+            border:2px black solid;
+            border-radius:5px;
+            display:grid;
+            height:90vh;
+            grid-template-areas: 
+            "content image";
+            grid-template-rows:repeat(2,fr1)
+        }
+        #content{
+            padding:5vh 0vw;
+            padding-left:5vw;
+            justify-self:centre;
+            align-self:center;
+            grid-area:content;
+        }
+        #image{
+            border-radius:5px;
+            margin:3vh 2vw;
+            width:50vw;
+            height:83vh;
+            grid-area:image;
+            background-color: yellow;
+        }
+        #content>p{
+            font-size:65%;
+            color:rgb(121, 114, 114)
+        }
+        img{
+            border-radius:5px;
+            border-right:1px solid black;
+            height:83vh;
+            width:30vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="content">
+            <h1>Healthy Food</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nisi praesentium molestiae sapiente commodi quibusdam nemo quisquam, aliquam, unde aspernatur, dolorem totam quis aut sed!</p>
+            <br>
+            <a href="#" style="text-decoration:none;font-style:italic; padding: 2vh 2vw; background-color: black; color:white;">Read Me</a>
+        </div>
+
+        <div id="image">
+            <img src="./media/health-food.png" alt="Healthy Food">
+        </div>
+    </div>
+</body>
+</html>
