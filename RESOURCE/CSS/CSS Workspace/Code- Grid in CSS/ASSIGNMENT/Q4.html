@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./media/favicon.png" type="image/x-icon">
+    <title>Healthy Food</title>
+    <style>
+        .container{
+            border:2px black solid;
+            border-radius:5px;
+            display:grid;
+            height:120vh;
+            width:90vw;
+            margin:0vh 3vw;
+            grid-template-areas: 
+            "feature feature"
+            "options options";
+        }
+        #feature{
+            height:59vh;
+            width:90vw;
+            background-color: rgb(27, 33, 38);
+            grid-area:feature;
+            display:flex;
+            justify-content:center;
+        }
+        #feature>div{
+            text-align:center;
+            align-self:center;
+            margin:1vh 1vw;
+        }
+        #feature>div>p{
+            color: rgb(95, 177, 95);
+            font-size:60%;
+        }
+        #options{
+            height:60vh;
+            grid-area:options;
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            /* width:90vw; */
+            gap:5vw;
+        }
+        #options>div{
+            border-radius:10px;
+            border:1px solid rgb(46, 41, 41);
+            box-shadow:0 2px 5px black;
+            align-self:center;
+            width:25vw;
+
+            text-align:center;
+        }
+        #options>div>p{
+            font-size:60%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="feature">
+            <div id="no-min-order">
+                <img src="./media/no-min-order.png" title="Icon Created By - Talha Dogar" alt="No Minimum Order Value" style="height:20vh;background-color: white; border-radius:5px;">
+                <h3 style="color:white; font-weight:lighter; font-style:italic;">No Minimum Order</h3>
+                <p>Order in for yourself or for your group, with no restrictions on order value</p>
+            </div>
+            <div id="live-order-tracking">
+                <img src="./media/live-location.png" title="Icon Created By - Andy Horvath" alt="Live Order Tracking" style="height:20vh;background-color: white; border-radius:5px;">
+                <h3 style="color:white; font-weight:lighter; font-style:italic;">Live Order Tracking</h3>
+                <p>Know Where your Order is at all times, from the restaurant to your doorstep</p>
+            </div>
+            <div id="fast-delivery">
+                <img src="./media/fast-delivery.png" alt="Fast Delivery" title="Icon Created By - YnJStudio" style="height:20vh;background-color: white; border-radius:5px;">
+                <h3 style="color:white; font-weight:lighter; font-style:italic;">Fast Delivery</h3>
+                <p>Experience Superfast Food Delivery for Fresh & Delicious Food</p>
+            </div>
+        </div>
+        <div id="options">
+            <div id="order-food">
+                <img src="./media/food.png" alt="Food" style="height:25vh;width:25vw;border-radius:5px;border:1px black solid;">
+                <h4>Order Online</h4>
+                <p>Stay Home and Order at your Door Step</p>
+            </div>
+            <div id="dining">
+                <img src="./media/on-site-dining.png" alt="On-Site Dining" style="height:25vh; width:25vw; border-radius:5px; border:1px black solid;">
+                <h4>On-Site Dining</h4>
+                <p>View the city's favourite dining venues</p>
+            </div>
+            <div id="club">
+                <img src="./media/nightlife.jpg" alt="Night Life & Clubs" style="height:25vh;width:25vw;border-radius:5px;border:1px black solid;">
+                <h4>Nightlife & Clubs</h4>
+                <p>Explore the city's nightlife outlets & book Tables</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

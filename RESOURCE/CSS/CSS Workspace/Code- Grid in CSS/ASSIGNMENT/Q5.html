@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./media/favicon.png" type="image/x-icon">
+    <title>Healthy Food</title>
+    <style>
+        .container{
+            border:2px black solid;
+            border-radius:5px;
+            display:grid;
+            height:130vh;
+            width:90vw;
+            margin:0vh 3vw;
+            grid-template-areas: 
+            "options options"
+            "footer footer"
+            "bottom bottom";
+        }
+        #options{
+            height:60vh;
+            grid-area:options;
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            /* width:90vw; */
+            gap:5vw;
+        }
+        #options>div{
+            border-radius:10px;
+            border:1px solid rgb(46, 41, 41);
+            box-shadow:0 2px 5px black;
+            align-self:center;
+            width:25vw;
+
+            text-align:center;
+        }
+        #options>div>p{
+            font-size:60%;
+        }
+        #footer{
+            padding-top:4vh;
+            background-color: rgb(43, 30, 22);
+            grid-area:footer;
+            justify-content:center;
+            gap:15vw;
+            display:flex;
+            flex-direction:row;
+        }
+        #footer>div{
+            align-self:center;
+            text-align:left;
+            /* border:2px black solid; */
+        }
+        #navigation,#learn-more{
+            text-align:left;
+            margin:0 0;
+        }
+        #navigation>li,#learn-more>li{
+            padding:1vh 0;
+            font-size:70%;
+            color:rgb(113,88,62);
+        }
+        footer{
+            color:white;
+            font-weight:lighter;
+            font-style:italic;
+            grid-area:bottom;
+            background-color: rgb(43, 30, 22);
+            text-align:center;
+        }
+        h4{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="options">
+            <div id="order-food">
+                <img src="./media/food.png" alt="Food" style="height:25vh;width:25vw;border-radius:5px;border:1px black solid;">
+                <h4>Order Online</h4>
+                <p>Stay Home and Order at your Door Step</p>
+            </div>
+            <div id="dining">
+                <img src="./media/on-site-dining.png" alt="On-Site Dining" style="height:25vh; width:25vw; border-radius:5px; border:1px black solid;">
+                <h4>On-Site Dining</h4>
+                <p>View the city's favourite dining venues</p>
+            </div>
+            <div id="club">
+                <img src="./media/nightlife.jpg" alt="Night Life & Clubs" style="height:25vh;width:25vw;border-radius:5px;border:1px black solid;">
+                <h4>Nightlife & Clubs</h4>
+                <p>Explore the city's nightlife outlets & book Tables</p>
+            </div>
+        </div>
+        <div id="footer">
+            <div>
+                <img src="./media/favicon.png" alt="Juice" style="height:40vh" id="juice-image">
+            </div>
+            <div>
+                <h4>Navigation Links</h4>
+                <ul style="list-style:none;" id="navigation">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Login</li>
+                </ul>
+            </div>
+            <div>
+                <h4>&nbsp;&nbsp;&nbsp; Learn More &nbsp;&nbsp;&nbsp;</h4>
+                <ul style="list-style:none;" id="learn-more">
+                    <li>Privacy</li>
+                    <li>Security</li>
+                    <li>Terms</li>
+                    <li>Sitemap</li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <h6>&copy; Copyright All Rights Reserved</h6>
+        </footer>
+    </div>
+
+</body>
+</html>

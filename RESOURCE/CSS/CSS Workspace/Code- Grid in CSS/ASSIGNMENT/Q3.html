@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./media/favicon.png" type="image/x-icon">
+    <title>Healthy Food</title>
+    <style>
+        .container{
+            border:2px black solid;
+            border-radius:5px;
+            display:grid;
+            height:150vh;
+            width:90vw;
+            margin:0vh 3vw;
+            grid-template-areas: 
+            "content image"
+            "content image"
+            "footer footer";
+        }
+        #content{
+            padding:4vh 0vw;
+            padding-left:5vw;
+            justify-self:centre;
+            align-self:center;
+            grid-area:content;
+        }
+        #image{
+            /* margin-top:500px; */
+            border-radius:5px;
+            margin:13vh 2vw;
+            width:50vw;
+            height:65vh;
+            grid-area:image;
+            background-color: yellow;
+        }
+        #content>p{
+            font-size:65%;
+            color:rgb(121, 114, 114)
+        }
+        img#healthy-food{
+            border-radius:5px;
+            border-right:1px solid black;
+            height:65vh;
+            width:30vw;
+        }
+        div.navbar{
+            position:fixed;
+            width:90vw;
+            height:2vh;
+            /* background-color: white; */
+        }
+        img#favicon{
+            height:6vh;
+            width:3vw;
+        }
+        #nav-list{
+            background-color: white;
+            margin-top:3vh;
+            box-shadow:0 1vh 5px black;
+            font-size:70%;
+            list-style:none;
+            display:flex;
+            flex-direction:row;
+            justify-content:space-evenly;
+            justify-items:center;
+            align-items:center
+
+        }
+        #menu{
+            justify-items:center;
+            align-items:center;
+            list-style:none;
+            display:flex;
+            flex-direction:row;
+            gap:1vw;
+        }
+        #menu>li{
+            /* border:1px solid black; */
+            padding:1vh 2vw;
+        }
+        #nav-list>a{
+            border-radius:5px;
+            padding:1vh 3vw;
+            color:white;
+            text-decoration:none;
+            font-style:italic;
+            background-color: rgb(95, 177, 95);
+        }
+        #footer{
+            height:59vh;
+            width:90vw;
+            background-color: rgb(27, 33, 38);
+            grid-area:footer;
+            display:flex;
+            justify-content:center;
+        }
+        #footer>div{
+            text-align:center;
+            align-self:center;
+            margin:1vh 1vw;
+        }
+        #footer>div>p{
+            color: rgb(95, 177, 95);
+            font-size:60%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <ul id="nav-list">
+                    <li>
+                        <img src="./media/favicon.png" alt="Juicy Food" id="favicon">
+                    </li>
+                    <li>
+                        <ul id="menu">
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                    </li>
+                    <a href="#">
+                        <li>Login</li>
+                    </a>
+                </ul>
+            </nav>
+            </div>
+        <div id="content">
+            <h1>Healthy Food</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nisi praesentium molestiae sapiente commodi quibusdam nemo quisquam, aliquam, unde aspernatur, dolorem totam quis aut sed!</p>
+            <br>
+            <a href="#" style="text-decoration:none;font-style:italic; padding: 2vh 2vw; background-color: black; color:white;">Read Me</a>
+        </div>
+
+        <div id="image">
+            <img src="./media/health-food.png" alt="Healthy Food" id="healthy-food">
+        </div>
+        <div id="footer">
+            <div id="no-min-order">
+                <img src="./media/no-min-order.png" title="Icon Created By - Talha Dogar" alt="No Minimum Order Value" style="height:20vh;background-color: white; border-radius:5px;">
+                <h3 style="color:white; font-weight:lighter; font-style:italic;">No Minimum Order</h3>
+                <p>Order in for yourself or for your group, with no restrictions on order value</p>
+            </div>
+            <div id="live-order-tracking">
+                <img src="./media/live-location.png" title="Icon Created By - Andy Horvath" alt="Live Order Tracking" style="height:20vh;background-color: white; border-radius:5px;">
+                <h3 style="color:white; font-weight:lighter; font-style:italic;">Live Order Tracking</h3>
+                <p>Know Where your Order is at all times, from the restaurant to your doorstep</p>
+            </div>
+            <div id="fast-delivery">
+                <img src="./media/fast-delivery.png" alt="Fast Delivery" title="Icon Created By - YnJStudio" style="height:20vh;background-color: white; border-radius:5px;">
+                <h3 style="color:white; font-weight:lighter; font-style:italic;">Fast Delivery</h3>
+                <p>Experience Superfast Food Delivery for Fresh & Delicious Food</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
