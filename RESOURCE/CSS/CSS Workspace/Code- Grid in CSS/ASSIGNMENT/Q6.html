@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Time table</title>
+        <style>
+            .container{
+                padding-left:0;
+                text-align:center;
+                margin-bottom:0;
+            }
+            #table{
+                padding:2vh .6vw;
+                border:2px black solid;
+                background-color: aqua;
+                font-size:1.5vw;
+                width:96vw;
+                margin-top:0;
+                display:grid;
+                grid-template-rows:repeat(8,12vh);
+                grid-template-columns: repeat(8,12vw);
+                grid-auto-flow: row;
+                margin-left:0;
+                align-content:center;
+            }
+            /* #table>div{
+                border:1px solid black;
+            } */
+            #table>div{
+                padding:3vh 2vw;
+                text-align:center;
+            }
+            #games,#let-off{
+                background-color: rgb(68, 158, 68);
+            }
+            #games,#let-off,#phy-lab,#chem-lab{
+                border:2px dotted black;
+                grid-column-start:7;
+                grid-column-end:9;
+            }
+            #bio-lab{
+                border:2px dotted black;
+                grid-column-start:2;
+                grid-column-end:4;
+            }
+            .time{
+                grid-row:1/3;
+                font-weight:bold;
+                border:2px dotted black;
+                background-color: rgb(179, 88, 88);
+                font-size:1.5vw;
+            }
+            .day{
+                font-weight:bold;
+                border:2px dotted black;
+                background-color: rgb(126, 51, 126);
+                font-size:1.5vw;
+            }
+            #phy,#chem,#bio,#english{
+                font-size:1.5vw;
+                border:2px dotted black;
+                background-color: aqua;
+            }
+            #lunch{
+                font-weight:bold;
+                font-size:1.5vw;
+                border:2px dotted black;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h3>Time Table</h3>
+            <div id="table">
+                <div class="time"><br>Time</div>
+                <div class="time"><br>08:00 AM - 09:00 AM</div>
+                <div class="time"><br>09:00 AM - 10:00 AM</div>
+                <div class="time"><br>10:00 AM - 11:00 AM</div>
+                <div class="time"><br>11:00 AM - 12:00 AM</div>
+                <div class="time"><br>12:00 AM - 02:00 PM</div>
+                <div class="time"><br>02:00 PM - 03:00 PM</div>
+                <div class="time"><br>03:00 PM - 04:00 PM</div>
+
+                <div class="day">Monday</div>
+                <div class="subject" id="english">English</div>
+                <div class="subject" id="bio">Biology</div>
+                <div class="subject" id="phy">Physics</div>
+                <div class="subject" id="chem">Chemistry</div>
+                <div class="subject" id="lunch" style="border-top:none;border-bottom:none;">L</div>
+                <div class="subject" id="chem-lab">Chemistry LAB</div>
+                <!-- <div class="subject" id="lab"></div> -->
+
+                <div class="day">Tuesday</div>
+                <div class="subject" id="bio-lab">Biology LAB</div>
+                <!-- <div class="subject" id="bio-lab"></div> -->
+                <div class="subject" id="phy">Physics</div>
+                <div class="subject" id="chem">Chemistry</div>
+                <div class="subject" id="lunch" style="border-top:none;border-bottom:none;">U</div>
+                <div class="subject" id="english">English</div>
+                <div class="subject" id="bio">Biology</div>
+                
+
+                <div class="day">Wednesday</div>
+                <div class="subject" id="english">English</div>
+                <div class="subject" id="bio">Biology</div>
+                <div class="subject" id="phy">Physics</div>
+                <div class="subject" id="chem">Chemistry</div>
+                <div class="subject" id="lunch" style="border-top:none;border-bottom:none;">N</div>
+                <div class="subject" id="games">Games</div>
+                <!-- <div class="subject" id="games"></div> -->
+
+                
+                <div class="day">Thursday</div>
+                <div class="subject" id="bio-lab">Biology LAB</div>
+                <!-- <div class="subject" id="bio-lab"></div> -->
+                <div class="subject" id="phy">Physics</div>
+                <div class="subject" id="chem">Chemistry</div>
+                <div class="subject" id="lunch" style="border-top:none;border-bottom:none;">C</div>
+                <div class="subject" id="english">English</div>
+                <div class="subject" id="bio">Biology</div>
+                
+                <div class="day">Friday</div>
+                <div class="subject" id="english">English</div>
+                <div class="subject" id="bio">Biology</div>
+                <div class="subject" id="phy">Physics</div>
+                <div class="subject" id="chem">Chemistry</div>
+                <div class="subject" id="lunch" style="border-top:none;border-bottom:none;">H</div>
+                <div class="subject" id="phy-lab">Physics LAB</div>
+                <!-- <div class="subject" id="lab"></div> -->
+                
+                <div class="day">Saturday</div>
+                <div class="subject" id="bio-lab">Biology LAB</div>
+                <!-- <div class="subject" id="bio-lab"></div> -->
+                <div class="subject" id="phy">Physics</div>
+                <div class="subject" id="chem">Chemistry</div>
+                <div class="subject" id="lunch" style="border-top:none;">Break</div>
+                <div class="subject" id="let-off">LET OFF</div>
+                <!-- <div class="subject" id="let-off"></div> -->
+
+            </div>
+        </div>
+    </body>
+</html>

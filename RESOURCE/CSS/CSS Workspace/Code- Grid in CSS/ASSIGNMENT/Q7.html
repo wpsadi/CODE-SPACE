@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .container{
+                margin-left:100px;
+                /* padding:5px; */
+                border:2px black solid;
+                display:grid;
+                width:630px;
+                height:628px;
+                grid-template-columns: repeat(3,200px);
+                grid-template-rows: repeat(3,200px);
+                /* grid-gap:10px; */
+                grid-gap:5px;
+                grid-auto-flow:row;
+            }
+            #image-1{
+                height:200px;
+            }
+            #image-2{
+                height:400px;
+            }
+            #image-3{
+                height:200px;
+            }
+            #image-4{
+                height:400px;
+                
+            }
+            #image-5{
+                height:200px;
+            }
+            #image-6{
+                height:400px;
+                /* grid-row:2/4; */
+            }
+            .images{
+                width:200px;
+                border-radius:20px;
+                border:1px bloack solid;
+            }
+            #div-1{
+                padding:10px;
+                grid-row:1/2;
+            }
+            #div-2{
+                padding:10px;
+                grid-row:1/3;
+            }
+            #div-3{
+                padding:10px;
+                grid-row:1/2;
+            }
+            #div-4{
+                padding:10px;
+                grid-row:2/4;
+            }
+            #div-5{
+                padding:10px;
+                grid-row:3/4;
+            }
+            #div-6{
+                grid-gap:0;
+                padding:10px;
+                grid-row:2/4;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="div-1">
+                <img src="./media/media-Q7/wallpaper-1.jpg" alt="Wallpaper-1" id="image-1" class="images">
+            </div>
+
+            <div id="div-2">
+                <img src="./media/media-Q7/wallpaper-2.jpg" alt="Wallpaper-2" id="image-2" class="images">
+            </div>
+
+            <div id="div-3">
+                <img src="./media/media-Q7/wallpaper-3.jpg" alt="Wallpaper-3" id="image-3" class="images">
+            </div>
+
+            <div id="div-4">
+                <img src="./media/media-Q7/wallpaper-4.jpg" alt="Wallpaper-4" id="image-4" class="images">
+            </div>
+
+            <div id="div-5">
+                <img src="./media/media-Q7/wallpaper-5.jpg" alt="Wallpaper-5" id="image-5" class="images">
+            </div>
+
+            <div id="div-6">
+                <img src="./media/media-Q7/wallpaper-6.jpg" alt="Wallpaper-6" id="image-6" class="images">
+            </div>
+        </div>
+    </body>
+</html>
