@@ -1,0 +1,26 @@
+What is the Responsive Web Design?
+
+What are its advantages?
+    Improved User Experence
+    Increased Mobile Traffic
+    Cost & Time Efficiency
+    Search Engine Optimization (SEO) benefits
+
+Ways to implement Responsive Web Design
+    Responsive Layouts
+    Responsive Images
+    Media Query
+    Responsive Typography
+    The Viewport Meta Tag
+
+
+Media:
+    all
+    screen
+    speech
+    print
+ 
+ Operators:
+    and
+    or
+    
