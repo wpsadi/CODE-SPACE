@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height:100vh;
+        }
+        .screen{
+            background-color: #a79c9c;
+        }
+
+
+        /* in the below line use max-width [WE can also write min-width but min-width isn't good */
+        /* applies when width is 576px and down */
+        /* @media screen and (max-width: 576px) {
+            .screen{
+                background-color: rgb(136, 55, 55);
+            }
+        } */
+        @media screen and (min-width:776px){
+            .screen{
+                background-color: blue;
+            }
+        }
+
+        @media screen and (min-width:1200px){
+            .box{
+                background-color: rgb(24, 185, 73);
+            }
+        }
+
+        /* works on small device : 576px and down */
+        /* @media screen and (min-width: 576px) {
+            
+        } */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1 class="screen">Width :</h1>
+    </div>
+    <!-- for breakpoints as used in max-width and min width 
+    
+    search on web: css breakpoint tailwind/bootstrap-->
+</body>
+</html>
