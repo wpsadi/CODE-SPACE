@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/118204758?v=4" type="image/x-icon">
+        <title>Q1</title>
+        <style>
+            body{
+                background-color: grey;
+            }
+            .container{
+                display:flex;
+                flex-direction:row;
+                height:80px;
+                background-color: rgb(27, 33, 38);
+                border-radius:20px;
+                outline-width:3px;
+                outline-color:wheat;
+                outline-style:solid;
+                justify-content:space-between;
+                align-content:space-around;
+                align-items:center;
+            }
+            #logo{
+                margin-left:30px;
+                height:66px;
+                font-weight:bolder;
+                font-size:30px;
+                color:rgb(65, 65, 148);
+            }
+            #menu{
+                display:flex;
+                flex-direction:row;
+                color:white;
+                gap:5px;
+            }
+            .menu-item{
+                padding:5px 10px;
+                border:2px solid white;
+                font-size:20px;
+                border-radius:20px;
+            }
+            #login{
+                background-color: rgb(75, 75, 223);
+                padding:5px 30px;
+                color:white;
+                font-size:20px;
+                border:2px solid white;
+                border-radius:5px;
+                margin-right:30px;
+            }
+            #menu-icon{
+                display:none;
+            }
+
+            @media screen and (max-width:168px){
+                #menu,#login{
+                    display:none;
+                /* }
+                #menu-icon{
+                    display:block;
+                    margin:30px;
+                    color:rgb(170, 36, 36);
+                    /* background-color: white; */
+                }
+            }
+
+            @media screen and (max-width:752px) and (min-width:168px){
+                #menu,#login{
+                    display:none;
+                }
+                #menu-icon{
+                    display:block;
+                    margin:30px;
+                    color:rgb(170, 36, 36);
+                    /* background-color: white; */
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="logo">LO<br>GO</div>
+            <div id="menu-icon">
+                <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                class="icon-tabler-menu-2" 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                stroke-width="2" 
+                stroke="currentColor" 
+                fill="none" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"
+                style="color:white; border-radius:10px; border:2px solid white;padding:5px"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M4 6l16 0" />
+                  <path d="M4 12l16 0" />
+                  <path d="M4 18l16 0" />
+                </svg>
+            </div>
+            <div id="menu">
+                <div id="home" class="menu-item">Home</div>
+                <div id="Blog" class="menu-item">Blog</div>
+                <div id="about" class="menu-item">About</div>
+                <div id="contact" class="menu-item">Contact</div>
+            </div>
+            <div id="login">Login</div>
+        </div>
+
+    </body>
+</html>
