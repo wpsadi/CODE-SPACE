@@ -1,98 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/118204758?v=4" type="image/x-icon">
-        <title>Q2</title>
-        <style>
-            body{
-                font-family:Arial, Helvetica, sans-serif;
-            }
-            .nav-container{
-                display:flex;
-                flex-direction:row;
-                height:80px;
-                background-color: rgb(27, 33, 38);
-                border-radius:20px;
-                outline-width:3px;
-                outline-color:wheat;
-                outline-style:solid;
-                justify-content:space-between;
-                align-content:space-around;
-                align-items:center;
-            }
-            #logo{
-                margin-left:30px;
-                height:66px;
-                font-weight:bolder;
-                font-size:30px;
-                color:rgb(65, 65, 148);
-            }
-            #menu{
-                display:flex;
-                flex-direction:row;
-                color:white;
-                gap:5px;
-            }
-            .menu-item{
-                padding:5px 10px;
-                border:2px solid white;
-                font-size:20px;
-                border-radius:20px;
-            }
-            #login{
-                background-color: rgb(75, 75, 223);
-                padding:5px 30px;
-                color:white;
-                font-size:20px;
-                border:2px solid white;
-                border-radius:5px;
-                margin-right:30px;
-            }
-            #menu-icon{
-                display:none;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 
-            #desktop-view-content{
-                justify-content:center;
-                display:flex;
-                flex-direction:row;
-                height:300px;
-            }
-            div#left-content{
-                margin:8vh 2vw;
-                margin-left:5vw;
-                /* height:300px; */
-            }
-            /* div#right-content{
-                height:300px;
-                margin-left:30px;
-            } */
+.links{
+    text-decoration:none;
+    color:black;
+}
 
-            @media screen and (max-width:168px){
-                #menu,#login{
-                    display:none;
-                } 
-            }
+#nav-container-1, #nav-container-2{
+    display:flex;
+    background-color: rgb(43, 38, 38);
+    flex-direction:row;
+    height:80px;
+    /* gap:10%; */
+    justify-content:space-between;
+    flex-wrap:nowrap;
+    align-items:center;
+}
 
-            @media screen and (max-width:752px) and (min-width:168px){
-                #menu,#login{
-                    display:none;
-                }
-                #menu-icon{
-                    display:block;
-                    margin:30px;
-                    color:rgb(170, 36, 36);
-                    /* background-color: white; */
-                }
-            }
+#nav-container-2{
+    display:none;
+}
 
-        </style>
-    </head>
-    <body>
-        <div class="nav-container">
-            <div id="logo">LO<br>GO</div>
+#logo{
+    margin-left:20px;
+    font-size:30px;
+    font-weight:bold;
+    color:rgb(41, 96, 179);
+    font-family: Poppins
+}
+
+#nav-item-bar{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:15px;
+}
+
+.nav-items{
+    color:white;
+    font-family: poppins;
+    border-radius:5px;
+    font-size:20px;
+    padding:5px 20px;
+    border:1px rgb(109, 102, 102) solid;
+}
+
+#login{
+    margin-right:20px;
+    color:white;
+    border-radius:10px;
+    font-family: Poppins;
+    outline:2px solid white;
+    background-color: rgb(121, 42, 121);
+    padding:5px 20px;
+    font-size:28px;
+}
+
+#content{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    align-items:center;
+    align-content:center;
+    /* background-color: red; */
+    justify-content:space-between;
+}
+@media screen and (min-width:1000px){
+    #content{
+        /* border:1px solid black; */
+        flex-direction:row;
+        align-content:normal;
+        flex-wrap:nowrap;
+    }
+
+    
+}
+@media screen and (max-width:770px){
+
+    #nav-container-1{
+        display:none;
+    }
+
+    #nav-container-2{
+        display:flex;
+    }
+
+    #menu-icon{
+        display:block;
+        margin-right:10px;;
+    }
+    /* #article-1,#article-2{
+        margin-left:20px;
+        border:2px black solid;
+    } */
+    
+}
+
+#article-1{
+    padding-top:60px;
+    padding-left:30px;
+    font-family: Poppins;
+    height:400px;
+    width:700px;
+    /* border:2px black solid; */
+    /* background-color: blue; */
+}
+
+#line-1{
+    font-weight:bold;
+    font-size:30px;
+}
+
+#line-2{
+    font-weight:bold;
+    color:rgb(56, 114, 190);
+    font-size:60px;
+}
+
+#line-3{
+    margin-top:10px;
+    font-size:22px;
+    color:rgb(75, 127, 194);
+}
+
+#bank-partners{
+    margin-top:10px;
+    height:100px;
+    width:500px;
+}
+
+#para-1{
+    font-size:18px;
+}
+
+#article-2{
+    /* border:2px black solid; */
+    height:400px;
+}
+
+#card-phone-video{
+    height:500px;
+    width:540px;
+}
+    </style>
+</head>
+<body>
+    <div id="nav-container-1">
+        <a href="#" class="links">
+            <div id="logo">LOGO</div>
+        </a>
+        <div id="nav-item-bar">
+            <a href="#" class="links">
+                <div id="nav-item-home" class="nav-items">Home</div>
+            </a>
+            <a href="#" class="links">
+                <div id="nav-item-blog" class="nav-items">Blog</div>
+            </a>
+            <a href="#" class="links">
+                <div id="nav-item-about" class="nav-items">About</div>
+            </a>
+            <a href="#" class="links">
+                <div id="nav-item-contact" class="nav-items">Contact</div>
+            </a>
+        </div>
+        <a href="#" class="links">
+            <div id="login">Login</div>
+        </a>
+    </div>
+
+    <div id="nav-container-2">
+        <a href="#" class="links">
+            <div id="logo">LOGO</div>
+        </a>
+        <a href="#" class="link">
             <div id="menu-icon">
                 <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -113,25 +199,24 @@
                   <path d="M4 18l16 0" />
                 </svg>
             </div>
-            <div id="menu">
-                <div id="home" class="menu-item">Home</div>
-                <div id="Blog" class="menu-item">Blog</div>
-                <div id="about" class="menu-item">About</div>
-                <div id="contact" class="menu-item">Contact</div>
-            </div>
-            <div id="login">Login</div>
-        </div>
-        <div id="desktop-view-content">
-            <div id="left-content">
-                <h4 style="font-size:25px;margin-bottom:0px;">Say Hi To</h4>
-                <h2 style="color:rgb(24, 147, 247);font-size:50px;margin-bottom:0px;margin-top:3vh;">One Card</h2>
-                <h6 style="color:rgb(76, 175, 250);font-size:20px;margin-bottom:1vh;margin-top:1vh;">Co-branded Card Issurers :</h6>
-                <img src="./media/media-Q2/bank-partners.png" alt="Bank Partners" style="height:20vh;margin-top:1vh;">
-                <p style="font-size:15px;">India's best metal credit card. Built with full-stack tech. Backed by the principles of simplicity, transparency, and giving back control to the user.</p>
-            </div>
-            <div id="right-content">
-                <video src="./media/media-Q2/card-phone.mp4" autoplay muted loop style="height:80vh;margin-top:0px;"></video>
-            </div>
-        </div>
-    </body>
+        </a>
+    </div>
+
+    <main id="content">
+        <article id="article-1">
+            <span id="line-1">Say Hi To</span>
+            <br>
+            <span id="line-2">One Card</span>
+            <br>
+            <span id="line-3">Co-branded Card Issuers :</span>
+            <br>
+            <img src="media\media-Q2\bank-partners.png" alt="Bank Partners" id="bank-partners">
+            <br>
+            <p id="para-1">India's best metal credit card. Built with full-stack tech. Backed by the principles of simplicity, transparency, and giving back control to the user</p>
+        </article>
+        <article id="article-2">
+            <video src="media\media-Q2\card-phone.mp4" muted loop autoplay id="card-phone-video"></video>
+        </article>
+    </main>
+</body>
 </html>
