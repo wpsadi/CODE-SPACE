@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Q4</title>
+        <style>
+            body{
+                background-color: rgb(26, 23, 23);
+            }
+            #table-container{
+                position:relative;
+                left:5vw;
+                top:10vh;
+                border-radius:10px;
+                width:600px;
+                display:flex;
+                flex-direction:column;
+                flex-wrap:nowrap;
+                color:white;
+            }
+
+            .row{
+                display:flex;
+                flex-direction:row;
+                flex-wrap:nowrap;
+                border:1px grey solid;
+                padding:10px 5px;
+            }
+
+            .name{
+                flex:1;
+            }
+
+            .email{
+                flex:2;
+            }
+
+            .phone{
+                flex:1;
+            }
+
+            #row-1{
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                font-weight: bold;
+            }
+            #row-11{
+                border-bottom-left-radius:10px ;
+                border-bottom-right-radius:10px ;
+            }
+
+            @media screen and (max-width:700px) {
+                .phone{
+                    display:none;
+                }
+                
+                .name{
+                flex:none;
+                }
+
+                .email{
+                flex:none;
+                }
+
+                .row{
+                    justify-content:space-between;
+                }
+
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div id="table-container">
+
+            <div class="row" id="row-1">
+                <div class="name">Name</div>
+                <div class="email">Email</div>
+                <div class="phone">Phone</div>
+            </div>
+
+            <div class="row" id="row-2">
+                <div class="name">Rahul Sharma</div>
+                <div class="email">rahul.sharma@example.com</div>
+                <div class="phone">9876543210</div>
+            </div>
+
+            <div class="row" id="row-3">
+                <div class="name">Priya Patel</div>
+                <div class="email">priya.patel@example.com</div>
+                <div class="phone">8765432109</div>
+            </div>
+
+            <div class="row" id="row-4">
+                <div class="name">Amit Singh</div>
+                <div class="email">amit.singh@example.com</div>
+                <div class="phone">7654321098</div>
+            </div>
+
+            <div class="row" id="row-5">
+                <div class="name">Sneha Verma</div>
+                <div class="email">sneha.verma@example.com</div>
+                <div class="phone">6543210987</div>
+            </div>
+
+            <div class="row" id="row-6">
+                <div class="name">Mohit Aggarwal</div>
+                <div class="email">mohit.aggarwal@example.com</div>
+                <div class="phone">5432109876</div>
+            </div>
+
+            <div class="row" id="row-7">
+                <div class="name">Neha Gupta</div>
+                <div class="email">neha.gupta@example.com</div>
+                <div class="phone">4321098765</div>
+            </div>
+
+            <div class="row" id="row-8">
+                <div class="name">Rajesh Kumar</div>
+                <div class="email">rajesh.kumar@example.com</div>
+                <div class="phone">3210987654</div>
+            </div>
+
+            <div class="row" id="row-9">
+                <div class="name">Anita Desai</div>
+                <div class="email">anita.desai@example.com</div>
+                <div class="phone">2109876543</div>
+            </div>
+
+            <div class="row" id="row-10">
+                <div class="name">Varun Malhotra</div>
+                <div class="email">varun.malhotra@example.com</div>
+                <div class="phone">1098765432</div>
+            </div>
+
+            <div class="row" id="row-11">
+                <div class="name">Pooja Mehta</div>
+                <div class="email">pooja.mehta@example.com</div>
+                <div class="phone">0987654321</div>
+            </div>
+
+        </div>
+    </body>
+</html>

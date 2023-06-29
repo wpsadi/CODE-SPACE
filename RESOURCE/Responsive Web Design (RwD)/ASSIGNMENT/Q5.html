@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Q5</title>
+        <style>
+            #container{
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                border:2px black solid;
+                padding:15px;
+                /* width:625px; */
+                width:935px;
+            }
+
+            #heading{
+                /* background-color: red; */
+                /* text-align:center; */
+                font-weight:normal;
+                text-decoration:underline;
+            }
+            
+            #image-flexbox{
+                display:flex;
+                /* justify-content:space-around; */
+                gap:10px;
+                flex-wrap:wrap;
+            }
+
+            .images{
+                border:2px black solid;
+                border-radius:10px;
+                height:200px;
+                width:300px;
+            }
+
+            .images:hover, .images:focus{
+                transform:rotate(360deg);
+                cursor:pointer;
+                transition: all 0.5s ease-out;
+                border:2px rgb(253, 253, 253) solid;
+            }
+
+
+            @media screen and (max-width:990px) and (min-width:670px) {
+                
+                #container{
+                border:2px black solid;
+                padding:15px;
+                width:625px;
+                /* width:935px; */
+                }    
+                
+                #image-5, #image-6{
+                    display:none;
+                }
+            }
+
+            @media screen and (max-width:670px) {
+
+                #container{
+                border:2px black solid;
+                padding:15px;
+                width:310px;
+                /* width:935px; */
+                }    
+                
+                #image-5, #image-6, #image-4, #image-3{
+                    display:none;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="heading"><h1>Random Images</h1></div>
+            <div id="image-flexbox">
+                <img src="./media/media-Q5/1.jpg" alt="Image 1" class="images" id="image-1">
+                <img src="./media/media-Q5/2.jpg" alt="Image 2" class="images" id="image-2">
+                <img src="./media/media-Q5/3.jpg" alt="Image 3" class="images" id="image-3">
+                <img src="./media/media-Q5/4.jpg" alt="Image 4" class="images" id="image-4">
+                <img src="./media/media-Q5/5.jpg" alt="Image 5" class="images" id="image-5">
+                <img src="./media/media-Q5/6.jpg" alt="Image 6" class="images" id="image-6">
+            </div>
+        </div>
+    </body>
+</html>

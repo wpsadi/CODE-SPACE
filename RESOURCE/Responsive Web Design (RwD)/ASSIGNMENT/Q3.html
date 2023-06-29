@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+.links{
+    text-decoration:none;
+    color:black;
+}
+
+#nav-container-1, #nav-container-2{
+    display:flex;
+    background-color: rgb(43, 38, 38);
+    flex-direction:row;
+    height:80px;
+    /* gap:10%; */
+    justify-content:space-between;
+    flex-wrap:nowrap;
+    align-items:center;
+}
+
+#nav-container-2{
+    display:none;
+}
+
+#logo{
+    margin-left:20px;
+    font-size:30px;
+    font-weight:bold;
+    color:rgb(41, 96, 179);
+    font-family: Poppins
+}
+
+#nav-item-bar{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:15px;
+}
+
+.nav-items{
+    color:white;
+    font-family: poppins;
+    border-radius:5px;
+    font-size:20px;
+    padding:5px 20px;
+    border:1px rgb(109, 102, 102) solid;
+}
+
+#login{
+    margin-right:20px;
+    color:white;
+    border-radius:10px;
+    font-family: Poppins;
+    outline:2px solid white;
+    background-color: rgb(121, 42, 121);
+    padding:5px 20px;
+    font-size:28px;
+}
+
+#content{
+    /* height:1200px; */
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    align-items:center;
+    align-content:space-between;
+    /* background-color: red; */
+    justify-content:space-between;
+}
+
+#footer-content{
+    margin-top:100px;
+        border-radius:10px;
+        height:270px;
+        display:flex;
+        flex-direction:column;
+        flex-wrap:nowrap;
+        align-items:center;
+        /* background-color: rgb(14, 11, 11); */
+    }
+#footer-content>h2{
+        color:rgb(88, 45, 204);
+    }
+#footer-content>h3{
+        color:black;
+    }
+@media screen and (min-width:1000px){
+    #content{
+        height:600px;
+        /* border:1px solid black; */
+        flex-direction:row;
+        /* align-content:normal; */
+        flex-wrap:nowrap;
+        justify-content:space-between;
+    }
+    #footer-content{
+        border-radius:10px;
+        height:270px;
+        display:flex;
+        flex-direction:column;
+        flex-wrap:nowrap;
+        align-items:center;
+        background-color: rgb(14, 11, 11);
+    }
+    #footer-content>h2{
+        color:rgb(88, 45, 204);
+    }
+    #footer-content>h3{
+        color:white;
+    }
+
+    
+}
+@media screen and (max-width:770px){
+
+    #nav-container-1{
+        display:none;
+    }
+
+    #nav-container-2{
+        display:flex;
+    }
+
+    #menu-icon{
+        display:block;
+        margin-right:10px;;
+    }
+    /* #article-1,#article-2{
+        width:10px;
+        background-color: red;
+    } */
+    
+}
+
+#article-1{
+    padding-top:60px;
+    padding-left:30px;
+    font-family: Poppins;
+    height:400px;
+    width:700px;
+    /* border:2px black solid; */
+    /* background-color: blue; */
+}
+
+#line-1{
+    font-weight:bold;
+    font-size:30px;
+}
+
+#line-2{
+    font-weight:bold;
+    color:rgb(56, 114, 190);
+    font-size:60px;
+}
+
+#line-3{
+    margin-top:10px;
+    font-size:22px;
+    color:rgb(75, 127, 194);
+}
+
+#bank-partners{
+    margin-top:10px;
+    height:100px;
+    width:500px;
+}
+
+#para-1{
+    font-size:18px;
+}
+
+#article-2{
+    /* border:2px black solid; */
+    height:400px;
+}
+
+#card-phone-video{
+    height:500px;
+    width:540px;
+}
+
+    </style>
+</head>
+<body>
+    <div id="nav-container-1">
+        <a href="#" class="links">
+            <div id="logo">LOGO</div>
+        </a>
+        <div id="nav-item-bar">
+            <a href="#" class="links">
+                <div id="nav-item-home" class="nav-items">Home</div>
+            </a>
+            <a href="#" class="links">
+                <div id="nav-item-blog" class="nav-items">Blog</div>
+            </a>
+            <a href="#" class="links">
+                <div id="nav-item-about" class="nav-items">About</div>
+            </a>
+            <a href="#" class="links">
+                <div id="nav-item-contact" class="nav-items">Contact</div>
+            </a>
+        </div>
+        <a href="#" class="links">
+            <div id="login">Login</div>
+        </a>
+    </div>
+
+    <div id="nav-container-2">
+        <a href="#" class="links">
+            <div id="logo">LOGO</div>
+        </a>
+        <a href="#" class="link">
+            <div id="menu-icon">
+                <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                class="icon-tabler-menu-2" 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                stroke-width="2" 
+                stroke="currentColor" 
+                fill="none" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"
+                style="color:white; border-radius:10px; border:2px solid white;padding:5px"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M4 6l16 0" />
+                  <path d="M4 12l16 0" />
+                  <path d="M4 18l16 0" />
+                </svg>
+            </div>
+        </a>
+    </div>
+
+    <main id="content">
+        <article id="article-1">
+            <span id="line-1">Say Hi To</span>
+            <br>
+            <span id="line-2">One Card</span>
+            <br>
+            <span id="line-3">Co-branded Card Issuers :</span>
+            <br>
+            <img src="media\media-Q2\bank-partners.png" alt="Bank Partners" id="bank-partners">
+            <br>
+            <p id="para-1">India's best metal credit card. Built with full-stack tech. Backed by the principles of simplicity, transparency, and giving back control to the user</p>
+        </article>
+        <article id="article-2">
+            <video src="media\media-Q2\card-phone.mp4" muted loop autoplay id="card-phone-video"></video>
+        </article>
+    </main>
+    <footer>
+        <div id="footer-content">
+            <h2>NO Hidden Fees Ever</h2>
+            <h3>No Joining Fees.</h3>
+            <h3>No Annual Fees</h3>
+            <h3>No Rewards Redemption Fees</h3>
+        </div>
+    </footer>
+</body>
+</html>
