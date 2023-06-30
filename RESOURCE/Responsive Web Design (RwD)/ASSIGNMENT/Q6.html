@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Q6</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+            footer{
+                padding-top:20px;
+                padding-left:20px;
+                padding-right:20px;
+                font-family:poppins;
+                color:white;
+                margin-top:20%;
+                /* width:80%; */
+                height:300px;
+                background-color: rgb(27, 25, 25);
+                border-radius:10px;
+                display:flex;
+                flex-direction:row;
+                flex-wrap:nowrap;                
+                gap:50px;
+            }
+
+            footer>div{
+                display:flex;
+                flex-wrap:nowrap;  
+                flex-direction:column;
+                gap:15px;
+            }
+
+            #about-box{
+                flex:2;
+            }
+
+            #nav-box, #support-box, #newsletter-box{
+                flex:1;
+            }
+
+            .links{
+                text-decoration:none;
+                color:rgb(165, 169, 173)
+            }
+
+            #about-content, .nav-box-items, .support-box-items{
+                color:rgb(165, 169, 173)
+            }
+
+            #subscribe-button{
+                background-color: rgb(52, 65, 136);
+                padding:10px 0px;
+                border-radius:5px;
+                cursor:pointer;
+                text-align:center;
+                color:white;
+            }
+
+            #newsletter-box{
+                gap:8px;
+            }
+
+            #email-box{
+                outline-style:none;
+                /* height:30px; */
+                /* width:95%; */
+                height:35px;
+                padding-left:20px;
+                border-radius:10px;
+                background-color: white;
+            }
+
+            @media screen and (max-width:920px) {
+                
+                footer{
+                    padding:10px 30px;
+                    height:880px;
+                    flex-direction: column;
+                    gap:10px;
+                    /* align-items:center; */
+                }
+
+                footer>div{
+                    gap:5px;
+
+                }
+
+                #about-box, #nav-box, #support-box, #newsletter-box{
+                flex:1;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <footer>
+            <div id="about-box">
+                <h1 id="about-heading">One Card</h1>
+                <p id="about-content">India's best metal credit card. Built with full-stack tech. Backed by the principles of simplicity, transparency, and giving back control to the user.</p>
+            </div>
+
+            <div id="nav-box">
+                <h1 id="navigation-heading">Navigation</h1>
+                <div id="home" class=nav-box-items><a href="#" class="links">Home</a></div>
+                <div id="about" class=nav-box-items><a href="#" class="links">About Us</a></div>
+                <div id="contact" class=nav-box-items><a href="#" class="links">Contact</a></div>
+                <div id="offer" class=nav-box-items><a href="#" class="links">Offer</a></div>
+            </div>
+
+            <div id="support-box">
+                <h1 id="support-heading">Support</h1>
+                <div id="faq" class="support-box-items"><a href="#" class="links">F.A.Q</a></div>
+                <div id="cookie" class="support-box-items"><a href="#" class="links">Cookies Policy</a></div>
+                <div id="ToS" class="support-box-items"><a href="#" class="links">Terms of Service</a></div>
+                <div id="support" class="support-box-items"><a href="#" class="links">Support</a></div>
+            </div>
+
+            <div id="newsletter-box">
+                <h1 id="newsletter-heading">Newsletter</h1>
+                <input id="email-box" type="email" placeholder="Your email id here">
+                <a href="#" class="links">
+                    <div id="subscribe-button">Subscribe</div>
+                </a>
+            </div>
+
+        </footer>
+    </body>
+</html>
