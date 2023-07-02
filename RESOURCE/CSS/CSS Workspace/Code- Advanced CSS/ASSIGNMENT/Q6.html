@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Q6</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+            #container {
+                position:relative;
+                top:15vh;
+                left:30vw;
+                width: 500px;
+                border:2px black solid;
+                height:300px;
+                /* background-color: red; */
+            }
+
+            #container > h3{
+                text-align:center;
+                font-family: Poppins;
+                text-decoration: underline;
+                margin-bottom:0px;
+                padding-top:10px;
+            }
+
+            #image{
+                height:200px;
+                border-radius:10px;
+                border:5px black solid;
+                transition:all 0.2s ease-in;
+                filter: none;
+                margin-left:112px;
+                margin-top:20px;
+            }
+
+            #image:hover{
+                animation: ;
+                filter: grayscale();                
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h3>Hover to have a Greyscale Look</h3>
+            <img src="./media/microsoft-bill.png" alt="london image" id="image">
+        </div>
+    </body>
+</html>
