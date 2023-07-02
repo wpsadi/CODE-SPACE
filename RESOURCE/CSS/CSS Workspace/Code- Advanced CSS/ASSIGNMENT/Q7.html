@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q7</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+        #container{
+            position:relative;
+            top:100px;
+            left:100px;
+            height:153px;
+            width:230px;
+        }
+
+
+        #click{
+            position:relative;
+            padding-top: 10px;
+            text-align:center;
+            height:35px;
+            border-radius: 10px;
+            border:2px rgb(0, 0, 0) solid;
+            background-color: rgb(160, 106, 196);
+            animation: bounce 0.7s ease-in-out 0s infinite alternate;
+        }
+
+        #link{
+            padding-top:30px;
+            font-family:poppins;
+            text-decoration: none;
+            color: white;
+        }
+
+        @keyframes bounce {
+            from{
+                top:3px;
+            }
+
+            to{
+                top:100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <a href="#" id="link"><div id="click">Click me to Visit PW Skills</div></a>
+    </div>
+</body>
+</html>
