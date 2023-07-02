@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Q3</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+            #container{
+                position:relative;
+                top:15vh;
+                left:30vw;
+                font-family: Poppins;
+                border-radius:10px;
+                border: 5px rgb(59, 55, 55) solid;
+                height:300px;
+                width:300px;
+                background-image: linear-gradient(to right, rgb(69, 164, 221), rgb(51, 82, 195))
+            }
+
+            #container:hover{
+                transform: rotate(-45deg);
+            }
+
+            #flex-1{
+                margin: 0px 10px;
+                margin-top:15px;
+                display:flex;
+                align-items:center;
+                justify-content:space-between;
+
+            }
+
+            #done{
+                cursor:pointer;
+                font-weight:bold;
+                margin:5px 10px;
+                padding: 10px 80px;
+                border-radius:10px;
+                border:2px black solid;
+                background-image: linear-gradient(to right, rgb(69, 221, 219), rgb(52, 195, 98));
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="flex-1">
+                <div style="font-weight:bold; font-size:25px;">#01</div>
+                <div style="color:white;">Created On : 01/01/2023</div>
+            </div>
+            <div>
+                <h3 style="margin-left:10px;">Important dates</h3>
+                <ul type="disc">
+                    <li>January 26 - Republic Day</li>
+                    <li>August 15 - Independence Day</li>
+                    <li>October 2 - Gandhi Jayanti</li>
+                    <li>August 29 - National Sports Day</li>
+                </ul>
+            </div>
+            <div id="done">Mark As Done</div>
+        </div>
+    </body>
+</html>
