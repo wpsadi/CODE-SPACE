@@ -4,8 +4,38 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Homepage</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+            #nav-container{
+                display: flex;
+                flex-direction: row;
+                height: 80px;
+                border-radius:10px;
+                background-color: rgb(44, 44, 44);
+                align-items:center;
+                justify-content:space-between;
+                color:white;
+                font-family: Poppins;
+
+            }
+        </style>
     </head>
     <body>
-        
+        <div id="nav-container">
+            <div class="nav-items" id="navbar">
+                <div class="navbar-items" id="logo"></div>
+                <div class="navbar-items" id="landings">Landing</div>
+                <div class="navbar-items" id="pages">Pages</div>
+                <div class="navbar-items" id="account">Account</div>
+                <div class="navbar-items" id="ui-kit">UI-Kit</div>
+                <div class="navbar-items" id="docs">Docs</div>
+            </div>
+
+            <div class="nav-items" id="features">
+                <div class="features-items" id="day-n-night"></div>
+                <div class="features-items" id="buy">Buy Now</div>
+            </div>
+        </div>
     </body>
 </html>
