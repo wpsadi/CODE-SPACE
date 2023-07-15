@@ -619,16 +619,12 @@ video {
   display: none;
 }
 
-.h-40 {
-  height: 10rem;
-}
-
-.h-\[8\] {
-  height: 8;
-}
-
 .h-\[80px\] {
   height: 80px;
+}
+
+.h-40 {
+  height: 10rem;
 }
 
 .h-\[100px\] {
