@@ -22,6 +22,33 @@
                 font-size: 1.3rem;
             }
             
+            #discover-btn{
+                animation: bounce 0.5s linear 0ms infinite alternate;
+            }
+
+            @keyframes bounce{
+                from{
+                    position:relative;
+                    top:0rem;
+                }
+                to{
+                    position:relative;
+                    top:-1rem ;
+                }
+            }
+
+            #steps-box{
+                animation: pulse 0.5s linear 0ms infinite alternate;
+            }
+
+            @keyframes pulse{
+                from{
+                    transform: scale(1);
+                }
+                to{
+                    transform: scale(1.008);
+                }
+            }
         </style>
     </head>
     <body class="bg-[#242424]">
@@ -58,30 +85,70 @@
                         Authorised by FCA, ASIC & FSCA
                     </div>
                     <div class="border-solid text-center rounded-lg">
-                        <div class="rounded-lg bg-[#B7505B] w-fit px-4 py-2 text-white border-solid border-[#242424] cursor-pointer border-2 mb-2 hover:border-white">Discover Accounts</div>
+                        <div id="discover-btn" class="rounded-lg bg-[#B7505B] w-fit px-4 py-2 text-white border-solid border-[#242424] cursor-pointer border-2 mb-2 hover:border-white" style="                    position:relative;
+                        top:0;">Discover Accounts</div>
                     </div>
                 </div>
             </div>
             <img src="./media/in-liquid-slide-2.svg" alt="" class="block h-fit">
         </div>
 
-        <div id="container" class="px-4 py-2">
-            <div class="text-center w-full">
-                <div class="relative top-4 text-[#af5034] font-mono inline bg-[#242424] text-[1.5rem] font-bold">Simple Steps to start trade</div>
+        <div id=container class="mx-4 py-2 ">
+            <div id="steps-box">
+                <div class="text-center w-full">
+                    <div class="relative top-4 text-[#af5034] font-mono inline bg-[#242424] text-[1.5rem] font-bold">Simple Steps to start trade</div>
+                </div>
+                
+                <div id="box" class="px-4 py-3 flex lg:flex-row flex-col items-center border-solid border-2 border-[#af5034] rounded-lg lg:justify-evenly lg:gap-0 gap-7 text-[1.2rem]">
+                    <div class="flex flex-nowrap flex-col gap-3 items-center">
+                        <div class="rounded-full text-center h-9 w-9 border-solid border-2 border-[#af5034] text-[#af5034] font-bold bg-white">1</div>
+                        <div class="font-mono text-white">Register account</div>
+                    </div>
+                    <div class="flex flex-nowrap flex-col gap-3 items-center">
+                        <div class="rounded-full text-center h-9 w-9 border-solid border-2 border-[#af5034] text-[#af5034] font-bold bg-white">2</div>
+                        <div class="font-mono text-white">Fund your account</div>
+                    </div>
+                    <div class="flex flex-nowrap flex-col gap-3 items-center">
+                        <div class="rounded-full text-center h-9 w-9 border-solid border-2 border-[#af5034] text-[#af5034] font-bold bg-white">3</div>
+                        <div class="font-mono text-white">Start trade</div>
+                    </div>
+                </div>
             </div>
-            
-            <div id="box" class="px-4 py-3 flex lg:flex-row flex-col items-center border-solid border-2 border-[#af5034] rounded-lg lg:justify-evenly lg:gap-0 gap-7">
-                <div class="flex flex-nowrap flex-col gap-3 items-center">
-                    <div class="rounded-full text-center h-8 w-8 border-solid border-2 border-[#af5034] text-[#af5034] font-bold bg-white">1</div>
-                    <div class="font-mono text-white">Register account</div>
+
+        </div>
+        <div class="bg-[#242424] mt-10 flex flex-col lg:flex-row justify-between px-6 py-5 items-start lg:gap-0 gap-10">
+            <div class="flex flex-row flex-nowrap items-center cursor-pointer w-fit">
+                <img src="./media/infinity.svg" alt="" class="block invert h-16 w-fit">
+                <div class="text-white font-mono font-bold text-[1.8rem]">INFINITY</div>
+            </div>
+            <div class="flex flex-col gap-10 lg:flex-row font-mono lg:items-start ">
+                <div class="space-y-4">
+                    <div class="font-bold text-[1.2rem] text-white">MARKETS</div>
+                    <div class="text-[#7c7a7a] space-y-2">
+                        <div class="cursor-pointer w-fit">Web Platform</div>
+                        <div class="cursor-pointer w-fit">Trading Apps</div>
+                        <div class="cursor-pointer w-fit">Meta Trader 5</div>
+                        <div class="cursor-pointer w-fit">Compare Features</div>
+                    </div>
                 </div>
-                <div class="flex flex-nowrap flex-col gap-3 items-center">
-                    <div class="rounded-full text-center h-8 w-8 border-solid border-2 border-[#af5034] text-[#af5034] font-bold bg-white">2</div>
-                    <div class="font-mono text-white">Fund your account</div>
+
+                <div class="space-y-4">
+                    <div class="font-bold text-[1.2rem] text-white">ACCOUNT TYPES</div>
+                    <div class="text-[#7c7a7a] space-y-2">
+                        <div class="cursor-pointer w-fit">Demo account</div>
+                        <div class="cursor-pointer w-fit">Standard account</div>
+                        <div class="cursor-pointer w-fit">ECN account</div>
+                        <div class="cursor-pointer w-fit">Islamic account</div>
+                    </div>
                 </div>
-                <div class="flex flex-nowrap flex-col gap-3 items-center">
-                    <div class="rounded-full text-center h-8 w-8 border-solid border-2 border-[#af5034] text-[#af5034] font-bold bg-white">3</div>
-                    <div class="font-mono text-white">Start trade</div>
+
+                <div class="space-y-4">
+                    <div class="font-bold text-[1.2rem] text-white">LEARN TO TRADE</div>
+                    <div class="text-[#7c7a7a] space-y-2">
+                        <div class="cursor-pointer w-fit">News and trade ideas</div>
+                        <div class="cursor-pointer w-fit">Trading strategy</div>
+                        <div class="cursor-pointer w-fit">Forex trading course</div>
+                    </div>
                 </div>
             </div>
         </div>
