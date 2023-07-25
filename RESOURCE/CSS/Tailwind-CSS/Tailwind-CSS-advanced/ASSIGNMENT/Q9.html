@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/118204758" type="image/x-icon">
+        <title>Q1</title>
+        <link rel="stylesheet" href="css-files/css-Q9.css">
+        <script src="https://kit.fontawesome.com/2e2983a05d.js" crossorigin="anonymous"></script>
+        <style>
+            #icon-option{
+                display:none;
+            }
+
+            #icon:hover #icon-option{
+                padding:0rem 0.5rem;
+                top:3.5rem;
+                right: 0.5rem;
+                display:block;
+                z-index: 1;
+                position:absolute;
+                font-size: 1.3rem;
+            }
+            
+        </style>
+    </head>
+    <body class="bg-[#242424]">
+        <div id="navbar" class="flex flex-row h-fit items-center px-4 justify-between py-2 bg-[#696969] font-bold">
+            <div id="logo" class="text-[2rem] font-mono font-bold text-white cursor-pointer flex flex-nowrap items-center gap-2">
+                <div><i class="fa-solid fa-infinity "></i></div>
+                <div><span class="">INFINITY</span></div>
+            </div>
+
+
+            <div class="hidden lg:flex flex-row gap-2 text-[1.5rem] font-mono">
+                <div class="cursor-pointer py-1 px-2 rounded-lg border-solid hover:border-white border-2 border-[#696969] bg-[#B7505B] text-white">Create Account</div>
+                <div id="icon" class="cursor-pointer rounded-[50%] flex items-center text-[1.5rem border-solid hover:border-white border-[2px] px-3 py-2 border-[#696969] font-mono">
+                    <i class="fa-solid fa-user-tie text-white"></i>
+                    <div id="icon-option" class="w-fit bg-[#5c5c5c] text-white rounded-lg" >
+                        <div style="border-bottom:1px solid white; text-align:center; cursor: pointer">My Courses</div>
+                        <div style="border-bottom:1px solid white; text-align:center; cursor: pointer">Settings</div>
+                        <div style="text-align:center; cursor: pointer">Logout</div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-white text-[2rem] block lg:hidden hover:rotate-90 cursor-pointer transition-all duration-[0.3s] ease-linear">
+                <i class="fa-solid fa-bars" id="menu"></i>
+            </div>
+        </div>
+
+        <div class="flex lg:flex-row flex-col lg:h-[89.7vh] items-center cursor-default h-full lg:gap-0 gap-5 sm:my-8 lg:my-0">
+            <div class="flex items-center justify-center px-8 text-white rounded-lg">
+                <div class="space-y-8">
+                    <div class="text-[2.5rem] font-mono">Multi-regulated global broker</div>
+                    <div class="font-mono leading-tight text-[#a8a2a2]">
+                        A trusted destination for traders worldwide.
+                        <br>
+                        Authorised by FCA, ASIC & FSCA
+                    </div>
+                    <div class="border-solid text-center rounded-lg">
+                        <div class="rounded-lg bg-[#B7505B] w-fit px-4 py-2 text-white border-solid border-[#242424] cursor-pointer border-2 mb-2 hover:border-white">Discover Accounts</div>
+                    </div>
+                </div>
+            </div>
+            <img src="./media/in-liquid-slide-2.svg" alt="" class="block h-fit">
+        </div>
+
+        <div id="container" class="px-4 py-2">
+            <div class="text-center w-full">
+                <div class="relative top-4 text-[#af5034] font-mono inline bg-[#242424] text-[1.5rem] font-bold">Simple Steps to start trade</div>
+            </div>
+            
+            <div id="box" class="px-4 py-3 flex lg:flex-row flex-col items-center border-solid border-2 border-[#af5034] rounded-lg lg:justify-evenly lg:gap-0 gap-7">
+                <div class="flex flex-nowrap flex-col gap-3 items-center">
+                    <div class="rounded-full text-center h-8 w-8 border-solid border-2 border-[#af5034] text-[#af5034] font-bold bg-white">1</div>
+                    <div class="font-mono text-white">Register account</div>
+                </div>
+                <div class="flex flex-nowrap flex-col gap-3 items-center">
+                    <div class="rounded-full text-center h-8 w-8 border-solid border-2 border-[#af5034] text-[#af5034] font-bold bg-white">2</div>
+                    <div class="font-mono text-white">Fund your account</div>
+                </div>
+                <div class="flex flex-nowrap flex-col gap-3 items-center">
+                    <div class="rounded-full text-center h-8 w-8 border-solid border-2 border-[#af5034] text-[#af5034] font-bold bg-white">3</div>
+                    <div class="font-mono text-white">Start trade</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
