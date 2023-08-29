@@ -27,21 +27,34 @@ function user_existence_check(username){
    }
 }
 
-function add(username , field, value){
-
+function change(username , field, value){   
+   for (let i of map.entries()){
+      if (i[0] == username){
+         i[1][field] = value 
+         break
+      }
+   }
+   console.log("Updated Successfully")
 }
 
 function remove(username, field){
-
+   for (let i of map.entries()){
+      if (i[0] == username){
+         delete i[1][field]
+         break
+      }
+   }
 }
 
-username = "wpsadi"
+username = "wpsadier"
 field = "ph"
 value = 8765432109
 
 
 if (user_existence_check(username) == true){
-
+   change(username , field, value)
+   remove(username, field)
+   console.log(map)
 }
 
 else{
