@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DOM selectors</title>
+   <style>
+      .highlight{
+         color:red;
+      }
+   </style>
+</head>
+<body>
+   <h1>DOM selectors</h1>
+   <p id="my-para">This is paragram with Dummy text</p>
+   <ul>
+      <li class="list-item">Item 1</li>
+      <li class="list-item">Item 2</li>
+      <li class="list-item">Item 3</li>
+      <li class="list-item">Item 4</li>
+   </ul>
+
+   <ol>
+      <li>Item 10</li>
+      <li>Item 11</li>
+      <li>Item 12</li>
+      <li>Item 13</li>
+   </ol>
+
+   <span id="hi">hi</span>
+
+   <script>
+      //  select element using different DOM selectors
+      console.log(document.getElementById('my-para'))
+
+      const para1 = document.getElementById('my-para')
+
+      para1.addEventListener('click', function(){
+         para1.classList.toggle('highlight')
+      })
+
+      const targetTag = document.getElementsByTagName('li')
+      console.log(targetTag)
+
+
+      // querySelector selectors except every css selector {"div > p"}
+      const span_Item = document.querySelector('#hi')
+
+      const firstListItem = document.querySelector('.list-item') // it get first element with the this class/id
+      const allListItems = document.querySelectorAll('.list-item') // it doesn't get updated in real time
+
+      const l_item = document.getElementsByClassName('list-item') // update in real time
+
+      console.log(l_item)
+      console.log(allListItems)
+      console.log(firstListItem)
+
+      span_Item.style.border = "1px solid #000"
+
+      firstListItem.textContent = "updated successfully"
+   </script>
+</body>
+</html>
