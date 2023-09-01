@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <div id="parentDiv">
+      <p>this is first para</p>
+      <p>this is second para</p>
+      <p>this is third para</p>
+   </div>
+   <script>
+      const Parent_div = document.getElementById("parentDiv")
+
+      const firstPara = Parent_div.firstChild
+      const secondPara = firstPara.nextSibling
+      const lastPara = Parent_div.lastChild
+      console.log(firstPara)
+      console.log(lastPara)
+   </script>
+</body>
+</html>
