@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Q8</title>
+   <style>
+      body{
+         margin:0px;
+      }
+
+      #container{
+         display: flex;
+         align-items:center;
+         justify-content: center;
+         height:100vh;
+         background: #000;
+      }
+
+      #box{
+         display:flex;
+         gap:20px;
+         /* height:200px;
+         width:100px; */
+         /* border: 1px solid red; */
+      }
+
+      .time{
+         background: #fff;
+         display:flex;
+         align-items:center;
+         justify-content: center;
+         border-radius:12px;
+         height:80px;
+         width: 80px;
+         color: #ff0000;
+         font-size:60px;
+         border: 3px solid #ff0000;
+      }
+   </style>
+</head>
+<body>
+   <div id="container">
+      <div id="box">
+         <div class="time" id="hr">--</div>
+         <div class="time" id="min">--</div>
+         <div class="time" id="sec">--</div>
+      </div>
+   </div>
+
+   <script>
+
+      let current_time
+         let cont = document.getElementById("container")
+         const hr = document.getElementById("hr")
+         const min = document.getElementById("min")
+         const sec = document.getElementById("sec")
+
+
+      function change_time(){
+         let time = new Date()
+         current_time = `${`${time.getHours()}`.padStart(2,0)}:${`${time.getMinutes()}`.padStart(2,0)}:${`${time.getSeconds()}`.padStart(2,0)}`
+         hr.innerText = current_time.split(":")[0]
+         min.innerText = current_time.split(":")[1]
+         sec.innerText = current_time.split(":")[2]
+
+         // console.log(current_time)
+         cont.style.setProperty("background-color", `#${current_time.split(":")[0]}${current_time.split(":")[1]}${current_time.split(":")[2]}`)
+      }
+      setInterval(change_time,1000)
+   </script>
+</body>
+</html>
