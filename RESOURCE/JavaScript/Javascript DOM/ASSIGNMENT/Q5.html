@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Q5</title>
+   <style>
+      .image-toggle{
+         display:none;
+      }
+   </style>
+</head>
+<body>
+   <h1>Your Image is <span id="vis">Visible</span><span id="hid" class="image-toggle">Hidden</span></h1>
+   <button id="btn">Toggle</button>
+   <br><br>
+   <img src="./media/thumbnail.png" alt="Image Not Available" >
+
+   <script>
+      const btn = document.getElementById("btn")
+      const image = document.getElementsByTagName("img")[0]
+      const vis_text = document.getElementById("vis")
+      const hid_text = document.getElementById("hid")
+
+      btn.addEventListener("click", function(){
+         image.classList.toggle("image-toggle")
+         vis_text.classList.toggle("image-toggle")
+         hid_text.classList.toggle("image-toggle")
+      })
+   </script>
+</body>
+</html>

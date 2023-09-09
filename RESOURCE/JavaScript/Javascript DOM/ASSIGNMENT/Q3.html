@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Q3</title>
+  </head>
+  <body>
+    <h2>Counter</h2>
+    <button id="plus"><i class="fa-solid fa-plus"></i></button>
+    <span id="counter" style="font-size:20px;">0</span>
+    <button id="minus"><i class="fa-solid fa-minus"></i></button>
+    <script>
+      const count = document.getElementById("counter")
+
+      function lessThan0(number){
+         if (Number(number) <= 0){
+            alert("Counter is going beyond 0")
+         }
+      }
+      
+
+      const plus = document.getElementById("plus")
+      const minus = document.getElementById("minus")
+
+      plus.addEventListener("click", function(){
+         count.innerText = Number(count.innerText)+1
+         lessThan0(count.innerText)
+         console.log()
+      })
+
+      minus.addEventListener("click", function(){
+
+         if (Number(count.innerText) <= 0){
+            lessThan0(count.innerText)
+         } else{
+            count.innerText = Number(count.innerText)-1
+         }
+      })
+
+
+    </script>
+  </body>
+</html>

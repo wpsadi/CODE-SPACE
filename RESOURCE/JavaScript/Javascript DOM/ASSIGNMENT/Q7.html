@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <input type="text" id="search" placeholder="Search for Items">
+   <br><br><br>
+   <b>Results :</b>
+   <ul id="list">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Tailwind CSS</li>
+      <li>Java</li>
+      <li>Github</li>
+      <li>JavaScript</li>
+   </ul>
+   <script>
+      let list
+      let arr=[]
+      list = document.getElementById("list")
+      list = list.getElementsByTagName("li")
+      for (let i of list){
+         arr.push(i.innerText.trim())
+      }
+
+      function reset(){
+         for (let i in arr){
+               list[i].style.setProperty("display", "list-item")
+            }
+         }
+         
+      
+      function find(term=""){
+         for (let i in arr){
+            if ((`${arr[i]}`.toLowerCase()).includes(term.toLowerCase()) != true ){
+               list[i].style.setProperty("display", "none")
+            }
+         }
+      }
+
+      const input = document.getElementById("search")
+
+      setInterval(function(){
+         reset()
+         // console.log(input.value)
+         if (((input.value).trim()).length > 0 ){
+            find(input.value)
+         }
+         else{
+         reset()
+         }
+         console.log(performance.now())
+
+      },1000)
+
+
+   </script>
+</body>
+</html>

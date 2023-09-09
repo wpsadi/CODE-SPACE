@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Q2</title>
+   <style>
+      .dark{
+         background-color: #000;
+         color: hsla(0, 71%, 46%, 0.745);
+      }
+
+      .mode-dark{
+         display:none;
+      }
+      
+      .mode-light{
+         display:none;
+      }
+   </style>
+</head>
+<body>
+   <h2>
+      This is 
+      <span id="light">Light</span>      
+      <span class="mode-dark" id="dark">Dark</span>
+
+       Mode
+   </h2>
+   <button>Toggle Theme</button>
+   <script>
+      const btn = document.getElementsByTagName("button")[0]
+      btn.addEventListener("click",function(){
+         document.getElementById("dark").classList.toggle("mode-dark")
+         document.getElementById("light").classList.toggle("mode-light")
+         document.body.classList.toggle("dark")
+      })
+   </script>
+</body>
+</html>

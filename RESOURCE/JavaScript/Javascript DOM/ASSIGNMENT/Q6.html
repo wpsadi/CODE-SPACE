@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Q6</title>
+</head>
+<body>
+   <script>
+      const body = document.body
+      const div = document.createElement("div")
+      body.append(div)
+      div.style.setProperty("font-weight", "bold")
+      div.innerText = "Which is Favourite Programming Language : "
+
+      arr = ["JavaScript", "Java", "Python", "C++"]
+
+      const select = document.createElement("select")
+      select.setAttribute("name" , "Lang")
+      for (let i of arr){
+         const option = document.createElement("option")
+         option.setAttribute("value",i)
+         option.style.setProperty("text-tansform","capitalize")
+         option.innerText = i
+         select.append(option)
+      }
+      div.append(select)
+   </script>
+</body>
+</html>

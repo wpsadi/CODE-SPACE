@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Q4</title>
+</head>
+<body>
+   <form action="#" method="get" style="width:fit-content; text-align:left; padding:10px; border:1px solid #000;">
+      <h1>SignUP Form</h1>
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="input-name" placeholder="Minimum 3 characters">
+      <br><br>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="input-email" placeholder="Minimum 3 characters">
+      <br><br>
+      <label for="pwd">Password:</label>
+      <input type="password" name="pwd" id="input-pwd" placeholder="(Minimum 8 characters)">
+      <br><br>
+      <button id="submit">Submit</button>
+   </form>
+
+   <script>
+      const name = document.getElementById("input-name")
+      const email = document.getElementById("input-email")
+      const pwd = document.getElementById("input-pwd")
+
+      const btn = document.getElementById("submit")
+
+      function check(parameter,len){
+         if ((parameter.value).length > len){
+            // console.log(len)
+            // console.log((parameter.value).length)
+            return true
+         }
+         else{
+            return false
+         }
+      }
+      btn.addEventListener("click", function(){
+         if (check(name,3) && check(email,3) && check(pwd,8) == true){
+            alert("Form Validation SUCCESSFULL")
+         } else{
+            alert("Form Validation FAILED")
+         }
+      })
+   </script>
+</body>
+</html>
