@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Q9</title>
+      <style>
+         .hid{
+            display:none;
+         }
+      </style>
+   </head>
+   <body>
+      <button id="login">LogIn</button>
+      <button id="logout">LogOut</button>
+      <h1 id="default">User Login Status: Unknown</h1>
+      <h1 id="custom" style="display: none;">User <span id="login-yes" class="hid">is</span><span id="login-no">Has Not</span> logged In</h1>
+
+      <script>
+         const loginBtn = document.getElementById("login")
+         const logoutBtn = document.getElementById("logout")
+
+         function standard(){
+            document.getElementById("default").style.setProperty("display", "none")
+            document.getElementById("custom").style.setProperty("display", "block")
+         }
+
+         loginBtn.addEventListener("click", function(){
+            standard()
+            localStorage.setItem("user","password")
+            document.getElementById("login-yes").style.setProperty("display", "inline")
+            document.getElementById("login-no").style.setProperty("display", "none")
+         })
+
+         logoutBtn.addEventListener("click", function(){
+            standard()
+            localStorage.removeItem("user")
+            document.getElementById("login-yes").style.setProperty("display", "none")
+            document.getElementById("login-no").style.setProperty("display", "inline")
+         })
+      </script>
+   </body>
+</html>
