@@ -69,3 +69,7 @@ gamerFinder = gameScore.find(function(score){
 console.log(gamerFinder)
 
 //findIndex , sum , sort
+
+gameScorenew = gameScore.sum(function(score){
+   
+})
