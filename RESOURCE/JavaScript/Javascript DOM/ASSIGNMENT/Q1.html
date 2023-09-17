@@ -8,44 +8,37 @@
    <body>
       <div id="container">
          <h1 style="text-transform:capitalize">update profile picture</h1>
-         <div><input type="file" name="image" accept="image/*" id="file-input"></div>
+         <div>
+            <input type="file" name="image" accept="image/*" id="file-input">
+            <input type="file" name="image" accept="image/*">
+         </div>
          <h3 style="text-transform:capitalize">your profile picture</h3>
          <img src="" alt="No Profile Picture" id="img">
       </div>
-      <div id="error">
-         wrong password
-         <button id="again">try again</button>
-      </div>
+
 
 
       <script>
          const file = document.getElementById("file-input")
          const img = document.getElementById("img")
-         name = prompt("age","here")
-            if (name == "usict"){
-               document.getElementById("error").style.display = "none";
-               document.getElementById("container").style.display = "block";
-            }
-            else{
-               document.getElementById("container").style.display = "none";
-               document.getElementById("error").style.display = "block";
+
+         function loadIMG(){
+            // console.log(this.files.innerHTML)
+            const file = this.files[0];
+            // console.log(file)
+
+            let reader = new FileReader()
+
+            reader.onload = function(){
+               img.src = reader.result
             }
 
-         document.getElementById("again").addEventListener("click", function(){
-            name = prompt("age","here")
-            if (name == "usict"){
-               document.getElementById("error").style.display = "none";
-               document.getElementById("container").style.display = "block";
-            }
-            else{
-               document.getElementById("container").style.display = "none";
-               document.getElementById("error").style.display = "block";
-            }
-         })
+            reader.readAsDataURL(file)
+         }
 
-         // file.addEventListener("click",function(){
-         //    img.src = file.URL
-         // })
+         file.addEventListener("change",loadIMG)
+
+         // loadIMG()
       </script>
    </body>
 </html>
