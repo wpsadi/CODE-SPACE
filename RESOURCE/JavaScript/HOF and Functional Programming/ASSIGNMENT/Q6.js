@@ -4,5 +4,5 @@ function URLvalidator(url){
    return rex.test(url)
 }
 
-urlHere = "http://linkedin.com/in/fushiyama"
+urlHere = "http://linkedin.com/in/wpsadi"
 console.log(URLvalidator(urlHere))
