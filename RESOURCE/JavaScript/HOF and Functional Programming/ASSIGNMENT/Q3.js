@@ -1,4 +1,8 @@
-function USDtoINR(object){
+x = function (){
+   return  price*80
+}
+
+function USDtoINR(object,x){
    obj = new Object()
 
    for (i in object){
@@ -6,9 +10,6 @@ function USDtoINR(object){
       price = object[i]
       //1 USD = 80 INR
 
-      x = function (){
-         return  price*80
-      }
       
       obj[item] = x()
    }
@@ -21,4 +22,4 @@ objct = {
    "bread" : 2
 }
 
-console.log(USDtoINR(objct))
+console.log(USDtoINR(objct,x))
