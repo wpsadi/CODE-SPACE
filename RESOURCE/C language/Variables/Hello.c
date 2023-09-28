@@ -15,7 +15,8 @@ int main(){
 
    char status;
    printf("status is :");
-   // scanf("%c", &status);
+   scanf("%c", &status);
+   printf("end");
    return 1;
 }
 
