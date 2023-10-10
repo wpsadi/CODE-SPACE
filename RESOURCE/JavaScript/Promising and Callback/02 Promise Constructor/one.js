@@ -3,9 +3,6 @@ function createPromise(){
         setTimeout(function(){
             reject("no") // thhen u can use .then().catch()
             resolve("done")// if you did resolve then u can use ,.then()
-
-
-
             console.log("hi")
         },1000)
     })
