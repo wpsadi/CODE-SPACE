@@ -1,0 +1,12 @@
+what is a lexical scope?
+
+our main code is in Global Execution codeif we make a function in the code then the GEC is lexical(parent) scope of that function
+
+
+function a(){
+    function b(){
+
+    }
+}
+
+here ais lexical scope of b ,a and GEC is lexical scope of a
