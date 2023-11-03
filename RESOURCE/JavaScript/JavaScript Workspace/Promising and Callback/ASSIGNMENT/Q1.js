@@ -1,15 +1,14 @@
-function f(array,t){
-    return t(array)
+function array1(arr, arrayDoub){
+    return arrayDoub(arr);
 }
 
-function t(array){{}
-    for (let i in array){
-        array[i] *= 2
+function arrayDoub(arr){
+    for (let i in arr){
+        arr[i] *= 2;
     }
 
-    return array
+    console.log(arr)
 }
 
-x = f([1,2,3,4,5,6,7,8,9,0],t)
 
-console.log(x)
+x = array1([1,2,3,4,5,6,7,8,9,0],arrayDoub)
