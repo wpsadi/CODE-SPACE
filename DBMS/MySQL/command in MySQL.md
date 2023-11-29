@@ -17,3 +17,8 @@ where
 like - % to search for character , _ for exact length
 order by<attribute> desc(optional for reverse) as (optional for ascending (default) )
     if attribute is same then we can provide any other element to arrange
+
+limit - get only specific number of records
+offset <number> - it tell from which count we have to should show result; -> used to create pagination
+
+update <attribute> - used to update attribute itself;
