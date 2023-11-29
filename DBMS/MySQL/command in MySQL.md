@@ -15,4 +15,5 @@ create table <table>{
 # condition
 where
 like - % to search for character , _ for exact length
-order by<attribute> desc(optional for reverse) as (optional for ascending (default))
+order by<attribute> desc(optional for reverse) as (optional for ascending (default) )
+    if attribute is same then we can provide any other element to arrange
