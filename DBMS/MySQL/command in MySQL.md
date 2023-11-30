@@ -25,4 +25,10 @@ update <attribute> - used to update attribute itself;
 
 delete - to delete an entry from table
 
-while creating table we can do auto increment
+# while creating table we can do auto increment
+
+joins
+    <table1> JOIN <table 2> ON <condition of equality>
+                                condition -> tb1.addressid == tb2.addressid
+
+group by
