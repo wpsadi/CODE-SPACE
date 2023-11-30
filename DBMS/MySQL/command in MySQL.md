@@ -22,3 +22,7 @@ limit - get only specific number of records
 offset <number> - it tell from which count we have to should show result; -> used to create pagination
 
 update <attribute> - used to update attribute itself;
+
+delete - to delete an entry from table
+
+while creating table we can do auto increment
