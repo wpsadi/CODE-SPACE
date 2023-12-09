@@ -31,4 +31,10 @@ joins
     <table1> JOIN <table 2> ON <condition of equality>
                                 condition -> tb1.addressid == tb2.addressid
 
+    <table1>RIGHT OUTER JOIN <table 2> ON <condition of equality>
+                                condition -> tb1.addressid == tb2.addressid
+
+    <table1>LEFT OUTER JOIN <table 2> ON <condition of equality>
+                                condition -> tb1.addressid == tb2.addressid
+
 group by
