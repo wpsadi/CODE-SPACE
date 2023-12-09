@@ -9,3 +9,5 @@ visit the above link to get cdn links
 
 npm i bootstrap@5.3.2
 npm install jquery@2
+
+open the folder in root directory {for this repository open the codespace folder when i have to use bottstrap} then then add the link and scripts like done in `cdn-bootstrap.html` 
