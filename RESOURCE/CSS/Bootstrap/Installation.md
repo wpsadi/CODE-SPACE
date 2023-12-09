@@ -8,3 +8,4 @@ visit the above link to get cdn links
 # Another Efficient way is to use NPM
 
 npm i bootstrap@5.3.2
+npm install jquery@2
