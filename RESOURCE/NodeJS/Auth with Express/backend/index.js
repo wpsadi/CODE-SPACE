@@ -1,15 +1,6 @@
-const express = require("express")
+const app = require('./app');
+const port = process.env.PORT || 3002;
 
-app = express();
-
-// app.use('/', (req,res) => {
-//     res.send("hi")
-// })
-
-// app.get("/asdf", (req,res) => {
-//     res.send("hi")
-// })
-
-// app.get("/asd", (req,res) => {
-//     res.send("hi there")
-// })
+app.listen(port, () => {
+    console.log("Server is running at " + port);
+});

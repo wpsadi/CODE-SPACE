@@ -1,7 +1,26 @@
-const port = process.env.PORT || 3000
+const express = require("express");
+const app = express(); 
+// app.use(express.json());
 
-app = require('./app')
+// const authRouter = require("./route/authRoute");
 
-app.listen(port, () => {
-    console.log("Server is running")
+app.use('/', (req,res) => {
+    res.status(200).json({
+        data: "JWTAuth server"
+    });
 })
+
+// app.use('/', (req,res) => {
+//     res.status(200).json({
+//         data: "JWTAuth"
+//     })
+// })
+
+app.use("/api/auth", function(){
+    res.json({
+        x:"y"
+    })
+});
+
+
+module.exports = app;
