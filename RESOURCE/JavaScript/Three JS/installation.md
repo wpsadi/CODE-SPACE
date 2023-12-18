@@ -3,3 +3,6 @@ npm install --save three
 
 # then this is the tool to build
 npm install --save-dev vite
+
+# `This Command to use Vite`
+npx vite
