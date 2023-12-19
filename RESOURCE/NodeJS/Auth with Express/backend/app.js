@@ -9,7 +9,7 @@ app.use("/google",function(req,res){
     res.status(200).json({
         data : "google knows"
     })
-})  
+})
 
 app.use("/",function(req,res){
     res.status(200).json({
