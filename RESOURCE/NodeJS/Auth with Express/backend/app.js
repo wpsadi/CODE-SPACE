@@ -1,7 +1,12 @@
 const express = require("express");
-const {authRouter} = require("./router/routes")
+const {authRouter} = require("./router/routes");
+const dbConnect = require("./config/databseConfig");
 
 let app = express();
+
+dbConnect()
+
+app.use(express.json())
 
 app.use("/api/auth",authRouter);
 
