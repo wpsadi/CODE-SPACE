@@ -15,9 +15,9 @@ let p2 = __filename // gives current filepath
 let dir1 = __dirname // give director name
 //path.basename(path, [,ext])
 x = path.basename(p2) //name of file with extension
-y = path.basename(p2,".js")
+y = path.basename(p2,".js");
 
-// console.log(y)
+console.log(x);
 
 //path.dirname - give dir of the path given
 x =  path.dirname(p2)
@@ -41,7 +41,7 @@ x = path.format({
 
 // path.join  - combines the path 
 x = path.join("public","js","dist")
-// console.log(x)
+console.log(x)
 
 // path.parse - breaks an address into differenct parts - ext,base,dir,root,name
 x = path.parse(__filename)
@@ -53,7 +53,7 @@ x = path.relative(__filename,__dirname+"/x.html")
 
 //path.resolve - it gives directory
 x = path.resolve()
-// console.log(x)
+console.log(x)
 
 //path.normalise - 
 x = path.normalize("//home/user//js")

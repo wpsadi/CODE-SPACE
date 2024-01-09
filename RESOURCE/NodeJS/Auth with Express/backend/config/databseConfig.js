@@ -1,10 +1,11 @@
 const mongoose = require("mongoose")
 
 const mongoDB_url = process.env.mongoDB_url || "mongodb://localhost:27017"
+// console.log(mongoDB_url)
 
-const dbConnect =  ()=>{
+const dbConnect = ()=>{
     mongoose
-        .connect(mongoDB_url)
+        .connect(mongoDB_url) 
         .then((conn) => console.log("connected :"+ conn.connection.host))
         .catch((err) => console.log("Error :"+err.message))
 
