@@ -57,6 +57,6 @@ console.log(x)
 
 //path.normalise - 
 x = path.normalize("//home/user//js")
-// console.log(x)
+console.log(x)
 
 
