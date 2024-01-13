@@ -1,5 +1,5 @@
 const emailVal = require("email-validator");
-const userModel = require("../Connections/schema");
+const userModel = require("../model/userSchema");
 const JWT = require("jsonwebtoken");
 require("dotenv").config();
 
