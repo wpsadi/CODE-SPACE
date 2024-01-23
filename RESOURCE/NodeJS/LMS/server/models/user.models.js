@@ -1,4 +1,8 @@
 import { Schema,model } from "mongoose";
+import bcrypt from "bcrypt";
+import JWT from "jsonwebtoken";
+import {config} from "dotenv";
+config();
 
 const UserSchema = new Schema({
     fullName:{
@@ -42,6 +46,23 @@ const UserSchema = new Schema({
 },{
     timestamps:true
 })
+
+UserSchema.pre('save',async (next)=>{
+    if (!this.isModified('password')){
+        return next();
+    }
+    this.password = await bcrypt.hash(this.password,10)
+})
+
+UserSchema.methods ={
+    JWT_gen: function(){
+        return JWT.sign({
+            email:this.email,fullName:this.fullName
+        },process.env.JWT_secret,{
+            expiresIn:"7d"
+        })
+    }
+}
 
 const userModel = model("Accounts",UserSchema);
 
