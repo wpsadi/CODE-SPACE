@@ -8,7 +8,7 @@ authRouter = express.Router();
 
 authRouter.post('/signup',signup);
 authRouter.post("/signin",signin);
-// authRouter.get("/login",cookieMiddleware,getUser);
-// authRouter.get("/logout",logout)
+authRouter.get("/login",cookieMiddleware,getUser);
+authRouter.get("/logout",logout)
   
 module.exports = {authRouter};
