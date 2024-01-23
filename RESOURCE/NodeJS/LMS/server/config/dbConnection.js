@@ -6,8 +6,8 @@ mongoose.set("strictQuery",false);
 
 const dbConnect = async () =>{
     try{
-        const url  =process.env.mongoURL || "mongodb://localhost:27017"
-        console.log(url)
+        const url  = process.env.mongoURL || "mongodb://localhost:27017"
+        // console.log(url)
         const {connection} = await mongoose.connect(url)
     
         if (connection){
@@ -23,5 +23,6 @@ const dbConnect = async () =>{
     }
  
 }
+
 
 export default dbConnect

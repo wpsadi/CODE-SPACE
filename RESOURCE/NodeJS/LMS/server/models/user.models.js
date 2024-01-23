@@ -47,20 +47,25 @@ const UserSchema = new Schema({
     timestamps:true
 })
 
-UserSchema.pre('save',async (next)=>{
-    if (!this.isModified('password')){
+UserSchema.pre('save',async function(next){
+    if(!this.isModified('password')){
         return next();
     }
+
     this.password = await bcrypt.hash(this.password,10)
 })
+
 
 UserSchema.methods ={
     JWT_gen: function(){
         return JWT.sign({
-            email:this.email,fullName:this.fullName
+            email:this.email,fullName:this.fullName,subscription:this.subscription,userType:this.userType
         },process.env.JWT_secret,{
-            expiresIn:"7d"
+            expiresIn:`${process.env.JWT_expiry}`
         })
+    },
+    comparePassword: async function(text){
+        return await bcrypt.compare(text,this.password)
     }
 }
 
