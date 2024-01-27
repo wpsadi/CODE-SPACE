@@ -1,7 +1,8 @@
 import AppError from "../utility/utility.js";
 import userModel from "../models/user.models.js";
 import cloudinary from "cloudinary";
-import fs from "fs";
+import fs from "fs/promises";
+import sendEmail from "../utility/sendEmail.js"
 
 const cookieOptions = {
     maxAge: 7 * 24 * 60 * 60 * 1000,
@@ -32,7 +33,7 @@ const register = async (req, res, next) => {
             public_id: email,
             secure_url: "https://wpsadi.github.io/IEEE/images/ant-man_2015.jpg"
 
-        }
+        },
     });
 
     if (!user) {
@@ -42,12 +43,12 @@ const register = async (req, res, next) => {
     //ToDO file upload
     if (req.file) {
         try {
-            const result = await cloudinary.v2.uploader.upload(req.file.path,{
-                folder:'lms',
-                width:250, //in px
-                height:250,
-                gravity:'faces',
-                crop:'fill'
+            const result = await cloudinary.v2.uploader.upload(req.file.path, {
+                folder: 'lms',
+                width: 250, //in px
+                height: 250,
+                gravity: 'faces',
+                crop: 'fill'
 
             });
 
@@ -56,8 +57,8 @@ const register = async (req, res, next) => {
                 user.avatar.secure_url = result.secure_url;
 
                 //removing file from local storage
-                console.log(result.public_id, result.secure_url)
-                // fs.rm(`uploads/${req.file.filename}`)
+                // console.log(result.public_id, result.secure_url)
+                fs.rm(`uploads/${req.file.filename}`)
 
             }
 
@@ -154,4 +155,83 @@ const userProfile = async (req, res, next) => {
 }
 
 
-export { register, login, logout, signin, userProfile }
+
+console.log();
+
+
+
+const reset =async (req,res,next)=>{
+  const { resetToken } = req.params;//get request ki tarah parameter aaeaga token ka
+
+  const { password } = req.body;
+
+  const forgotPasswordToken = crypto
+    .createHash('sha256')
+    .update(resetToken)
+    .digest('hex');
+
+  if (!password) {
+    return next(new AppError('Password is required', 400));
+  }
+
+  console.log(forgotPasswordToken);
+
+  // Checking if token matches in DB and if it is still valid(Not expired)
+  const user = await userModel.findOne({
+    forgotPasswordToken,
+    forgotPasswordExpiry: { $gt: Date.now() }, // $gt will help us check for greater than value, with this we can check if token is valid or expired
+  });
+
+  if (!user) {
+    return next(
+      new AppError('Token is invalid or expired, please try again', 400)
+    );
+  }
+
+  user.password = password;
+
+  user.forgotPasswordExpiry = undefined;
+  user.forgotPasswordToken = undefined;
+
+  await user.save();
+
+  res.status(200).json({
+    success: true,
+    message: 'Password changed successfully',
+  });
+}
+
+const forgot = async (req,res,next)=>{
+    const {email} = req.body;
+
+    if (!email){
+        return next(new AppError("Email is required in forgot password",400))
+    }
+
+    const user = await userModel.findOne({email})
+
+    if (!user){
+        return next(new AppError("Email doesn't exist in database",400));
+    }
+
+    const resetToken = await user.generatePasswordResetToken();
+    await user.save();
+
+    const resetPasswordURL = `${process.env.frontend_url}/reset-password/${resetToken}`;
+    const message = `You can reset your your password by clicking <a href="${resetPasswordURL}" target="_blank">Click Here</a>"`
+    const subject = "Reset Password";
+    try{
+        await sendEmail(email,subject,message)
+        res.status(200).json({
+            success:true,
+            message:"Rest password link has been sent to your email"
+        })
+    }catch(err){
+        user.forgotPasswordExpiry = undefined;
+        user.forgotPasswordToken = undefined;
+        return next(new AppError(e.message,500))
+    }
+}
+
+
+export { register, login, logout, signin, userProfile, forgot, reset}

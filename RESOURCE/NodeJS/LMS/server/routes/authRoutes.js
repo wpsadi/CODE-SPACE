@@ -1,5 +1,5 @@
 import express from "express";
-import {register,login,logout,signin,userProfile} from "../controller/authController.js"
+import {register,login,logout,signin,userProfile,forgot,reset} from "../controller/authController.js"
 import isLoggedIn from "../middleware/auth.middleware.js";
 import upload from "../middleware/multer.middleware.js"
 
@@ -10,7 +10,8 @@ routes.post("/login",login);
 routes.post("/logout",logout);
 routes.post("/signin",signin);
 routes.post("/me",isLoggedIn,userProfile);
-// routers.post("/forgot/Password",forgot,resetPassword)
+routes.post("/reset",forgot);
+routes.post("/reset/:resetToken",reset);
  
 
 export default routes;

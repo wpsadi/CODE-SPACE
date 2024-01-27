@@ -16,6 +16,7 @@ app.use(cors({
 }));
 app.use(cookieParser());
 app.use(morgan('common'))
+app.use(express.urlencoded({extended:true}))
 
 
 app.use("/ping",(req,res)=>{
