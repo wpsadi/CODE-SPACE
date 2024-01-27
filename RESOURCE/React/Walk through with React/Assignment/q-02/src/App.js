@@ -1,12 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 
-
-function App() {
+function App({text,click}) {
   return (
-    <div className="App">
-      hi there i am using myself
-    </div>
+    <>
+    <button onClick={click}>{text}</button>
+    </>
   );
 }
 
