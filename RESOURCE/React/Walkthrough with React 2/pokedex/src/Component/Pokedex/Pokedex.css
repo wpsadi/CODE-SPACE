@@ -1,0 +1,17 @@
+.pokedex-wrapper{
+    display:flex;
+    /* align-items:center; */
+    flex-direction:column;
+}
+
+#hd-1{
+    /* padding-left:16px; */
+    margin: 7px auto;
+    letter-spacing:4px;
+    
+}
+
+.anchorH1{
+    color:red;
+    text-decoration:none;
+}

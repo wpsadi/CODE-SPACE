@@ -1,0 +1,10 @@
+#srch{
+    padding:8px 14px;
+    border-radius:9999px;
+    outline:none;
+    border:2px solid #000;
+    font-size:large;
+    width:80%;
+    margin: 7px auto;
+
+}

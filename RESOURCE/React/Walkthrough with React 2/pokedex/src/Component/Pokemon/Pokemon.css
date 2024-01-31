@@ -1,0 +1,27 @@
+.card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    flex-basis:20%;
+    
+    /* margin: 0px auto; */
+}
+
+.anchor{
+    color:#000;
+    text-decoration:none;
+}
+
+.name,.desc{
+    /* width:100px; */
+    /* border:1px solid #000; */
+    text-transform:capitalize;
+    font-size:larger;
+    text-wrap: wrap;
+    display:inline;
+    /* text-wrap:wrap; */
+}
+
+.image img{
+    width:120px;
+}

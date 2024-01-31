@@ -1,0 +1,9 @@
+.grid{
+  display:grid;
+  grid-template-rows:repeat(3,30vh);
+  align-items:center;
+  justify-items:center;
+  gap:5px;
+
+  grid-template-columns:repeat(3,30vw);
+}

@@ -1,0 +1,39 @@
+.card-box{
+    margin:6px auto;
+    display:flex;
+    /* border:1px solid #000; */
+    flex-direction:row;
+    width:99%;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:50px;
+
+}
+
+.btnss{
+    display:flex;
+    justify-content:center;
+    gap:6px;
+    
+}
+
+.btn{
+    text-align:center;
+    width:80px;
+    height:60px;
+    cursor:pointer;
+    border-radius:8px;
+    background:fff;
+    transition: color,background-color ease-in-out 0.3s;
+    border:1px solid #000;
+}
+
+.btn[disabled="false"]:hover{
+    background:#000;
+    color:#fff;
+}
+
+.btn:disabled{
+    cursor:default;
+    visibility:0.3;
+}
