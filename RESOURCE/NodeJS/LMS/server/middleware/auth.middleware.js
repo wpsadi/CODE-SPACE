@@ -16,4 +16,16 @@ const isLoggedIn = async (req,res,next)=>{
     next()
 }
 
-export default isLoggedIn;
+const authorizeAdmin =(...roles) => async(req,res,next)=>{
+    let userRole = req.user.role;
+    userRole = "ADMIN"
+    // console.log(userRole)
+    if (roles.includes(userRole)){
+        next();
+    }
+    else{
+        return next(new AppError("Your account is not authorised to access this sensitive Info"))
+    }
+}
+
+export {isLoggedIn,authorizeAdmin};

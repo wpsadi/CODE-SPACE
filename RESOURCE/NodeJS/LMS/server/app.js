@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import {config} from "dotenv";
 import morgan from "morgan";
 import routes from "./routes/authRoutes.js"
+import CourseRoute from "./routes/courseRoutes.js"
 import errMiddleWare from "./middleware/error.middleware.js";
 config();
 
@@ -15,7 +16,7 @@ app.use(cors({
     Credential: true
 }));
 app.use(cookieParser());
-app.use(morgan('common'))
+app.use(morgan('dev'))
 app.use(express.urlencoded({extended:true}))
 
 
@@ -25,6 +26,7 @@ app.use("/ping",(req,res)=>{
 
 // routes of 3 modules
 app.use("/api/v1/user",routes)
+app.use("/api/v1/courses",CourseRoute)
 
 app.all("*",(req,res)=>{
     res.status(404).send("Err 404 : URL doesn't exist on this server")

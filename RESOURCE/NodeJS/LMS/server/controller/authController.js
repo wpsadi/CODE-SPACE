@@ -33,7 +33,7 @@ const register = async (req, res, next) => {
             public_id: email,
             secure_url: "https://wpsadi.github.io/IEEE/images/ant-man_2015.jpg"
 
-        },
+        }
     });
 
     if (!user) {
@@ -58,7 +58,7 @@ const register = async (req, res, next) => {
 
                 //removing file from local storage
                 // console.log(result.public_id, result.secure_url)
-                fs.rm(`uploads/${req.file.filename}`)
+                fs.rm(`uploads/${req.file.filename}`) 
 
             }
 
@@ -155,11 +155,6 @@ const userProfile = async (req, res, next) => {
 }
 
 
-
-console.log();
-
-
-
 const reset =async (req,res,next)=>{
   const { resetToken } = req.params;//get request ki tarah parameter aaeaga token ka
 
@@ -174,7 +169,7 @@ const reset =async (req,res,next)=>{
     return next(new AppError('Password is required', 400));
   }
 
-  console.log(forgotPasswordToken);
+//   console.log(forgotPasswordToken);
 
   // Checking if token matches in DB and if it is still valid(Not expired)
   const user = await userModel.findOne({
@@ -234,4 +229,84 @@ const forgot = async (req,res,next)=>{
 }
 
 
-export { register, login, logout, signin, userProfile, forgot, reset}
+const changePass = async (req,res,next)=>{
+    const {oldPwd,NewPwd} = req.body;
+    const {email} = req.user;
+
+    if (!oldPwd || !NewPwd){
+        return next(new AppError("All fields are necessary",400))
+    }
+
+    const user = await userModel.findOne({email}).select("+password");
+    console.log(req.user)
+
+    if (!user){
+        return next(new AppError("User doesn't exist",400))
+    }
+
+    const isPwdValid = user.comparePassword(oldPwd);
+
+    if (!isPwdValid){
+        return next(new AppError("Invalid Old Password",400))
+    }
+
+    user.password =  NewPwd;
+    await user.save();
+    user.password = undefined;
+
+    res.status(200).json({
+        status:true,
+        message:"Password Change Successfully"
+    })
+}
+
+
+const UpdateUser = async(req,res,next)=>{
+    const {fullName} = req.body
+    const {email} = req.user
+
+    const user = await userModel.findOne({email});
+
+    if (!user){
+        return next(new AppError("User doesn't exist",400))
+    }
+
+    if (fullName){
+        user.fullName = fullName    
+    }
+
+    if (req.file){
+        await cloudinary.v2.uploader.destroy(user.avatar.public_id);
+        try {
+            const result = await cloudinary.v2.uploader.upload(req.file.path, {
+                folder: 'lms',
+                width: 250, //in px
+                height: 250,
+                gravity: 'faces',
+                crop: 'fill'
+
+            });
+
+            if (result) {
+                user.avatar.public_id = result.public_id;
+                user.avatar.secure_url = result.secure_url;
+
+                //removing file from local storage
+                // console.log(result.public_id, result.secure_url)
+                fs.rm(`uploads/${req.file.filename}`) 
+
+            }
+
+        } catch (e) {
+            return next(new AppError("Error No Avatar or upload fail", 500))
+        }        
+    }
+    await user.save();
+    res.status(200).json({
+        status:true,
+        message:"Profile updated Successfully"
+    })
+
+
+}
+export { register, login, logout, signin, userProfile, forgot, reset,changePass,UpdateUser}
