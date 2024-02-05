@@ -28,4 +28,16 @@ const authorizeAdmin =(...roles) => async(req,res,next)=>{
     }
 }
 
-export {isLoggedIn,authorizeAdmin};
+const authorizeSubscriber = async(req,res,next)=>{
+    const subscription = req.user.subcsription;
+
+    const role = req.user.role;
+
+    if ((role !== "ADMIN") && (subscription.status !== "active")){
+        new AppError("please purchase course to view")
+    }
+
+    next();
+}
+
+export {isLoggedIn,authorizeAdmin,authorizeSubscriber};

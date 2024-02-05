@@ -11,21 +11,24 @@ function usePokemonList(url,type){
         loading: "true"
     })
 
+
     async function downloadPokemon() {
 
         const response = await axios.get(pokestate.apiURL);
         
 
-        console.log("type",type)
 
         if(type == true){
-            let res = response.data.pokemon;
+            let res = await response.data.pokemon;
+            // console.log(res)
+            let typeList = res.slice(0,5)
+            // console.log(typeList)
             setPokestate((state)=>({
                 ...state,
-                typeList:res.slice(0,5)
+                loading: false,
+                pokemonList : typeList
             }))
 
-            return 
         }
         else{
             let res = response.data.results
@@ -55,11 +58,11 @@ function usePokemonList(url,type){
             // });
     
             //I can only chnge state only boince in a function, but to do this multiple time i can use arrow function like below
-            setPokestate({
+            setPokestate((state)=>({
                 ...pokestate,
                 loading: false,
                 pokemonList: det
-            });
+            }));
             setPokestate((state)=>({
                 ...state,
                 next:response.data.next,
@@ -68,7 +71,7 @@ function usePokemonList(url,type){
     
         }
 
-        return res;
+        // return res;
 
     }
 
@@ -80,6 +83,6 @@ function usePokemonList(url,type){
         const result = downloadPokemon()
     }, [pokestate.apiURL])
 
-    return {setPokestate,pokestate}
+    return [setPokestate,pokestate]
 }
 export default usePokemonList;

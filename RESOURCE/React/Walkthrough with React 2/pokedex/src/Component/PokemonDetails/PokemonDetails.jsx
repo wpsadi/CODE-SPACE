@@ -3,18 +3,14 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import usePokemonList from "../../hooks/usePokemonList";
+import  PokemonDetailHook from "../../hooks/usePokemonDetail"
 
 function PokemonDetails() {
         const {id} = useParams();
-    
+
+        const [Poke, SetPoke] = PokemonDetailHook(id)
 
 
-
-    // console.log(Poke.type[0])
-
-   
-
-    // console.log((pokestate.typeList)[2].pokemon.name)
 
     return (
         <>
@@ -28,7 +24,7 @@ function PokemonDetails() {
             {Poke.type && <>
                 <div>More {Poke.type[0]} type pokemon</div>
             <div>
-                {pokestate.typeList && pokestate.typeList.map((item,index)=> <li>{item.pokemon.name}</li>)}
+                {Poke.pokemonList && Poke.pokemonList.map((item,index)=> <li>{item.pokemon.name}</li>)}
             </div>
             </>}
  

@@ -7,7 +7,7 @@ import usePokemonList from "../../hooks/usePokemonList";
 
 function PokemonList() {
 
-    const {setPokestate,pokestate} = usePokemonList("https://pokeapi.co/api/v2/pokemon?offset=0&limit=20",false)
+    const [setPokestate,pokestate] = usePokemonList("https://pokeapi.co/api/v2/pokemon?offset=0&limit=20",false)
 
     return (
         <>

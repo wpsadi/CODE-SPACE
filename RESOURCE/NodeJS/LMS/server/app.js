@@ -6,6 +6,7 @@ import morgan from "morgan";
 import routes from "./routes/authRoutes.js"
 import CourseRoute from "./routes/courseRoutes.js"
 import errMiddleWare from "./middleware/error.middleware.js";
+import payRoute from "./routes/payRoutes.js"
 config();
 
 
@@ -27,6 +28,7 @@ app.use("/ping",(req,res)=>{
 // routes of 3 modules
 app.use("/api/v1/user",routes)
 app.use("/api/v1/courses",CourseRoute)
+app.use("/api/v1/pay",payRoute)
 
 app.all("*",(req,res)=>{
     res.status(404).send("Err 404 : URL doesn't exist on this server")

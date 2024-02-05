@@ -2,7 +2,7 @@ import {config }from "dotenv";
 config();
 import app from "./app.js"
 import dbConnect from "./config/dbConnection.js"
-
+import Razorpay from "razorpay";
 import {v2 as cloudinary} from 'cloudinary';
           
 
@@ -18,6 +18,12 @@ cloudinary.config({
   api_key: '347444962484441', 
   api_secret: 'd-gJM4HOHD2SgaEMoP9KAw-O_AA' 
 });
+
+export const razorpay = new Razorpay({
+  key_id:process.env.rzp_key,
+  secret_id:process.env.secret
+});
+
 const port = process.env.PORT || 8005;
 app.listen(port,async ()=>{
     await dbConnect()
