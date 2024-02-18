@@ -2,9 +2,10 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import usePokemonList from "./usePokemonList";
 
-function PokemonDetailHook(id){
+function PokemonDetailHook(id,pokemonName){
 
     // const { id } = useParams();
+    // console.log(pokemonName)
     const [Poke, SetPoke] = useState({})
     const [ isLoading,setIsLoading] = useState(false)
     
@@ -12,7 +13,15 @@ function PokemonDetailHook(id){
 
 
     async function getDescPokemon(id) {
-        let url = `https://pokeapi.co/api/v2/pokemon/${id}`
+        let url
+
+        if (pokemonName != undefined){
+            url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+        }
+        else{
+            url = `https://pokeapi.co/api/v2/pokemon/${id}`
+        }
+        
         let api = await axios.get(url)
         api = api.data;
         // console.log("hi")
@@ -29,18 +38,8 @@ function PokemonDetailHook(id){
             pokemonList,
             type: api.types.map((item, index) => item.type.name)
         })
-        setTypeAvailable(Poke.type  && Poke.type[0])
         setIsLoading(false)
-        // console.log("hi")
-        // console.log(Poke.type && Poke.type[0] || null)
-        // pokemonListHook = usePokemonList(`https://pokeapi.co/api/v2/type/${(Poke.type  && Poke.type[0]) || TypeAvailable}`, true)
-        // console.log(pokemonListHook)
 
-        
-
-        // setpokeListHook({...pokemonListHook,url:`https://pokeapi.co/api/v2/type/${Poke.type ? Poke.type[0] : 'fire'}`})console.log(Poke.type && Poke.type[0] || null)
-
-        // console.log(api.types[0].type)
     }
 
     

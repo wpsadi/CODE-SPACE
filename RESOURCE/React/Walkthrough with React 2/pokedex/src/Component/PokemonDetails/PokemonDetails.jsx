@@ -5,10 +5,11 @@ import { useParams } from "react-router-dom";
 import usePokemonList from "../../hooks/usePokemonList";
 import  PokemonDetailHook from "../../hooks/usePokemonDetail"
 
-function PokemonDetails() {
+function PokemonDetails({pokemonName}) {
         const {id} = useParams();
 
-        const [Poke, SetPoke] = PokemonDetailHook(id)
+        const [Poke, SetPoke] = PokemonDetailHook(id,pokemonName)
+        
 
 
 
@@ -24,7 +25,7 @@ function PokemonDetails() {
             {Poke.type && <>
                 <div>More {Poke.type[0]} type pokemon</div>
             <div>
-                {Poke.pokemonList && Poke.pokemonList.map((item,index)=> <li>{item.pokemon.name}</li>)}
+                {Poke.pokemonList && Poke.pokemonList.map((item,index)=> <li key={item.pokemon.name}>{item.pokemon.name}</li>)}
             </div>
             </>}
  
