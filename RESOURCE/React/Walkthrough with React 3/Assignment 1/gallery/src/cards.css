@@ -1,0 +1,14 @@
+.setSize{
+    height:120px;
+    border-radius:8px;
+    border:1px solid #000;
+    transition:0.2s all ease-out;
+}
+
+.setSize:hover{
+    transform:scale(1.2)
+}
+
+.full{
+    height:300px;
+}
