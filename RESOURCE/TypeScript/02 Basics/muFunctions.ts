@@ -10,4 +10,23 @@ let loginUser = (username:string,password:string, paid:boolean = false):string=>
 
 let user = loginUser("aditya","adityaislegend@outlook.com")
 
+
+const heroes = ["thor","split"]
+// const heroes = [1,2]
+
+heroes.map((hero):string=>{
+    return "here is "+hero
+})
+
+const consoleErr = (hero:string):void=>{
+    console.log(hero)
+    // return "here is "+hero
+}
+
+const handleErr = (hero:string):never=>{
+    throw new Error(hero)
+    // return "here is "+hero
+}
+
+
 export {}
