@@ -1,20 +1,22 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import GlobalContext  from '../TodoContext'
+import todoDispatchContext from "../todoDispatchContext"
 
-function AddTodo({setList,list}){
-    let [text,setText] = useState("")
+
+function AddTodo({  }) {
+    let [text, setText] = useState("")
+    const dispatch = useContext(todoDispatchContext)
+    const {list,setList} = useContext(GlobalContext)
     return (<>
         <div>
-            <input type="text" placeholder="Create a new Todo" value={text} id="input-task" onChange={(e)=>{
+            <input type="text" placeholder="Create a new Todo" value={text} id="input-task" onChange={(e) => {
                 setText(e.target.value.trim())
-            }}/>
-            <button type="button" onClick={(e)=>{
+            }} />
+            <button type="button" onClick={(e) => {
                 let input = text
-                if (input.length>0 ){
-                    setList([...list,{id:list.length+1,todoData:input}])
-                    text=""
-                    setText("")
-                    // document.getElementById("input-task").value=""
-                }
+                dispatch({type:"add_todo",payload:{input:input}})
+                text = ""
+                setText("")
             }}>Add</button>
         </div>
     </>)
